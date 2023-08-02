@@ -43,9 +43,6 @@ body {
   display: inline-block;
   position: relative;
   cursor: pointer;
-  appearance: none;
-  background-image: url(/resources/svg/menu.svg);
-  background-size: cover;
   width: 20px;
   height: 12px;
 }
