@@ -21,13 +21,12 @@ body {
 #header__logo {
    color: #08a6e4;
    font-family: "Raleway", sans-serif;
-   font-size: 32px;
+   font-size: 2rem;
    font-style: normal;
    font-weight: 300;
-   line-height: 37px;
    display: inline-block;
-   width: 83%;
-   margin-left: 6.5%;
+   width: 85%;
+   margin-left: 1.563rem;
 }
 
 .header__nav {
@@ -35,15 +34,9 @@ body {
    width: 100%;
    height: 175.65px;
    color: #000;
-   text-align:center;
-   font-family: "Open Sans";
-   font-size: 11px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: 15px;
-   letter-spacing: 3.28px;
-   text-transform: uppercase;
-   display: block;
+   align-items: center;
+   display: inline-block;
+   border: 1px black solid;
 }
 
 .header__menu {
@@ -57,7 +50,6 @@ body {
    height: 12px;
 }
 
-
 .link {
    text-decoration: none;
 }
@@ -67,13 +59,13 @@ body {
    text-align: left;
    padding-left: 25px;
    font-family: Open Sans;
-   font-size: 11px;
+   font-size: 0.688rem;
    font-style: normal;
    font-weight: 700;
-   line-height: 15px;
    letter-spacing: 3.28px;
    text-transform: uppercase;
    padding-bottom: 14px;
+   display: inline;
 }
 
 .grey:hover {
