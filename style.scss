@@ -24,7 +24,7 @@ body {
    font-size: 32px;
    font-style: normal;
    font-weight: 300;
-   line-height: 37px; /* 115.625% */
+   line-height: 37px;
    display: inline-block;
    width: 83%;
    margin-left: 6.5%;
@@ -43,18 +43,7 @@ body {
    line-height: 15px;
    letter-spacing: 3.28px;
    text-transform: uppercase;
-   top: 70px;
-   position: absolute;
-   padding-top: 10px;
-   display: none;
-   opacity: 0;
-   transition: all 200ms ease-in;
-}
-
-.header__menu:checked + .header__nav {
    display: block;
-   opacity: 1;
-   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.29);
 }
 
 .header__menu {
@@ -66,16 +55,8 @@ body {
    background-size: cover;
    width: 20px;
    height: 12px;
-   transition: all 200ms ease-in;
 }
 
-.header__menu:checked {
-   background-image: url(/resources/svg/x-menu.svg);
-   background-size: cover;
-   width: 15.56px;
-   height: 15.56px;
-   transition: all 200ms ease-in;
-}
 
 .link {
    text-decoration: none;
