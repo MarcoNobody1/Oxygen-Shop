@@ -17,6 +17,15 @@ $normal: 400;
 $bold: 700;
 $ultrabold: 800;
 
+/*mixing para colores de los precios*/
+
+@mixin precio($color: #fb3b64) {
+   color: $color;
+   font-family: "Open Sans";
+   font-size: 2.875rem;
+   font-weight: $ligth;
+}
+
 /* Styling de todo el header*/
 
 #header {
@@ -288,5 +297,92 @@ $ultrabold: 800;
 
    img {
       transform: translateX(-58%) translateY(10%);
+   }
+}
+
+/*styling pt3*/
+
+#pt3 {
+   display: block;
+   text-align: center;
+
+   h2 {
+      font-family: "Raleway";
+      font-size: 2.25rem;
+      font-weight: $normal;
+      margin-top: 3.334rem;
+      margin-bottom: 0.875rem;
+   }
+}
+
+.pr1 {
+   position: relative;
+   display: inline-block;
+   width: auto;
+   height: 17.188rem;
+   margin: 0 5.563rem;
+   text-align: center;
+   
+   button {
+      position: absolute;
+      border-radius: 23px;
+      background: #eb476e;
+      color: #fff;
+      font-family: "Open Sans";
+      font-size: 0.813rem;
+      font-weight: $bold;
+      width: 9.375rem;
+      height: 3.125rem;
+      padding: auto;
+      z-index: 2;
+      transform: translateX(-50%) translateY(-50%);
+      border: none;
+   }
+}
+
+#pr__red {
+   display: block;
+   border-radius: 18px;
+   border: 1px solid #fb3b64;
+   background: #fff;
+   position: relative;
+   z-index: 1;
+   text-align: left;
+}
+
+.pr__title {
+   display: inline-block;
+   width: 9.188rem;
+   text-align: left;
+
+   h3 {
+      color: #13253b;
+      font-family: "Raleway";
+      font-size: 1.25rem;
+      font-weight: $bold;
+   }
+}
+
+.price1 {
+   @include precio;
+}
+
+.pr__marks{
+   display: inline-block;
+   width: 0.688rem;
+   text-align: left;
+   margin-top: 1.813rem;
+   margin-right: 0.625rem;
+   img{
+      padding-bottom: 1.75rem;
+   }
+}
+
+.pr__list{
+   display: inline-block;
+   width:5rem;
+
+   h5{
+      padding-bottom: 1.75rem;
    }
 }
