@@ -105,12 +105,12 @@ $ultrabold: 800;
       overflow: hidden;
       position: relative;
    }
+}
 
-   img {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-   }
+.imgbg {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
 }
 
 #pt1__intro {
@@ -150,4 +150,50 @@ $ultrabold: 800;
       font-weight: $normal;
       margin-bottom: 1.75rem;
    }
+}
+
+#pt1__figs {
+   text-align: center;
+
+   h3 {
+      font-family: "Raleway";
+      font-size: 1.25rem;
+      font-weight: $ultrabold;
+      letter-spacing: 5.96px;
+   }
+
+   h4 {
+      color: #a5a5a5;
+      font-family: "Raleway";
+      font-size: 1.063rem;
+      font-weight: $normal;
+      margin-top: 1.188rem;
+      margin-bottom: 1.563rem;
+   }
+
+   article {
+      width: 117px;
+      height: auto;
+   }
+}
+
+#fig1, #fig2, #fig3{
+   display: block;
+   margin: auto;
+}
+
+.moveimg{
+   position: absolute;
+}
+
+.img1{
+   transform: translateX(-78%);
+}
+
+.img2{
+   transform: translateX(-65%) translateY(30%);
+}
+
+.img3{
+   transform: translateX(-65%) translateY(10%);
 }

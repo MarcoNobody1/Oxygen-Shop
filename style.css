@@ -92,7 +92,8 @@ body {
   overflow: hidden;
   position: relative;
 }
-#pt1 img {
+
+.imgbg {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -132,6 +133,49 @@ body {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 1.75rem;
+}
+
+#pt1__figs {
+  text-align: center;
+}
+#pt1__figs h3 {
+  font-family: "Raleway";
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 5.96px;
+}
+#pt1__figs h4 {
+  color: #a5a5a5;
+  font-family: "Raleway";
+  font-size: 1.063rem;
+  font-weight: 400;
+  margin-top: 1.188rem;
+  margin-bottom: 1.563rem;
+}
+#pt1__figs article {
+  width: 117px;
+  height: auto;
+}
+
+#fig1, #fig2, #fig3 {
+  display: block;
+  margin: auto;
+}
+
+.moveimg {
+  position: absolute;
+}
+
+.img1 {
+  transform: translateX(-78%);
+}
+
+.img2 {
+  transform: translateX(-65%) translateY(30%);
+}
+
+.img3 {
+  transform: translateX(-65%) translateY(10%);
 }
 
 /*# sourceMappingURL=style.css.map */
