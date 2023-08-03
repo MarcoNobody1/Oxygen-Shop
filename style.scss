@@ -1,3 +1,5 @@
+/*Reglas generales para toda la página*/
+
 * {
    box-sizing: border-box;
    margin: 0;
@@ -7,6 +9,15 @@
 body {
    min-width: 320px;
 }
+
+/*variables font-weight*/
+
+$ligth: 300;
+$normal: 400;
+$bold: 700;
+$ultrabold: 800;
+
+/* Styling de todo el header*/
 
 #header {
    background: #fff;
@@ -23,7 +34,7 @@ body {
    font-family: "Raleway", sans-serif;
    font-size: 2rem;
    font-style: normal;
-   font-weight: 300;
+   font-weight: $ligth;
    display: inline-block;
    width: 85%;
    margin-left: 5%;
@@ -45,10 +56,10 @@ body {
       text-align: left;
       padding-top: 0.875rem;
       padding-left: 1.563rem;
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-size: 0.688rem;
       font-style: normal;
-      font-weight: 700;
+      font-weight: $bold;
       letter-spacing: 3.28px;
       text-transform: uppercase;
       padding-bottom: 0.875rem;
@@ -59,10 +70,13 @@ body {
       color: #000;
       cursor: pointer;
    }
-   
+
+   a {
+      text-decoration: none;
+   }
 }
 
-.hiddn{
+.hidden {
    display: none;
 }
 
@@ -75,6 +89,65 @@ body {
    height: 12px;
 }
 
-.link {
-   text-decoration: none;
+/*styling pt1*/
+
+#pt1 {
+   h2 {
+      text-align: center;
+      font-family: "Raleway";
+      font-size: 1.875rem;
+      font-weight: $ligth;
+      margin: 0.81rem auto 1.56rem;
+   }
+
+   figure {
+      height: 16.69rem;
+      overflow: hidden;
+      position: relative;
+   }
+
+   img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+}
+
+#pt1__intro {
+   display: block;
+   margin: 6.25rem auto;
+   text-align: center;
+   width: 19.375rem;
+   height: 13.31rem;
+
+   h1 {
+      color: #000;
+      text-align: center;
+      font-family: "Raleway";
+      font-size: 2.188rem;
+      font-weight: $normal;
+      margin-bottom: 1.25rem;
+   }
+
+   button {
+      border-radius: 2.5rem;
+      background: #08a6e4;
+      box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+      width: 100%;
+      height: 31.45%;
+      color: #fff;
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 1rem;
+      font-weight: $bold;
+      border: none;
+   }
+
+   .title {
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 1rem;
+      font-weight: $normal;
+      margin-bottom: 1.75rem;
+   }
 }

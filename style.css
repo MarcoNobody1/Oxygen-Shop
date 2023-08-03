@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Reglas generales para toda la página*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +10,8 @@ body {
   min-width: 320px;
 }
 
+/*variables font-weight*/
+/* Styling de todo el header*/
 #header {
   background: #fff;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.29);
@@ -45,7 +49,7 @@ body {
   text-align: left;
   padding-top: 0.875rem;
   padding-left: 1.563rem;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   font-size: 0.688rem;
   font-style: normal;
   font-weight: 700;
@@ -58,8 +62,11 @@ body {
   color: #000;
   cursor: pointer;
 }
+.header__nav a {
+  text-decoration: none;
+}
 
-.hiddn {
+.hidden {
   display: none;
 }
 
@@ -72,8 +79,59 @@ body {
   height: 12px;
 }
 
-.link {
-  text-decoration: none;
+/*styling pt1*/
+#pt1 h2 {
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 1.875rem;
+  font-weight: 300;
+  margin: 0.81rem auto 1.56rem;
+}
+#pt1 figure {
+  height: 16.69rem;
+  overflow: hidden;
+  position: relative;
+}
+#pt1 img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#pt1__intro {
+  display: block;
+  margin: 6.25rem auto;
+  text-align: center;
+  width: 19.375rem;
+  height: 13.31rem;
+}
+#pt1__intro h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 2.188rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+#pt1__intro button {
+  border-radius: 2.5rem;
+  background: #08a6e4;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+  width: 100%;
+  height: 31.45%;
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+}
+#pt1__intro .title {
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */
