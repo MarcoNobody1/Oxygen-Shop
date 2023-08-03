@@ -39,6 +39,21 @@ body {
    color: #000;
    align-items: center;
    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.29);
+
+   h6 {
+      color: #a5a5a5;
+      text-align: left;
+      padding-top: 0.875rem;
+      padding-left: 1.563rem;
+      font-family: Open Sans;
+      font-size: 0.688rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 3.28px;
+      text-transform: uppercase;
+      padding-bottom: 0.875rem;
+      display: block;
+   }
 }
 
 .hiddn{
@@ -58,20 +73,6 @@ body {
    text-decoration: none;
 }
 
-.grey {
-   color: #a5a5a5;
-   text-align: left;
-   padding-top: 0.875rem;
-   padding-left: 1.563rem;
-   font-family: Open Sans;
-   font-size: 0.688rem;
-   font-style: normal;
-   font-weight: 700;
-   letter-spacing: 3.28px;
-   text-transform: uppercase;
-   padding-bottom: 0.875rem;
-   display: block;
-}
 
 .grey:hover {
    color: #000;
