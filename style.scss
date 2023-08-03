@@ -54,6 +54,12 @@ body {
       padding-bottom: 0.875rem;
       display: block;
    }
+
+   h6:hover {
+      color: #000;
+      cursor: pointer;
+   }
+   
 }
 
 .hiddn{
@@ -71,10 +77,4 @@ body {
 
 .link {
    text-decoration: none;
-}
-
-
-.grey:hover {
-   color: #000;
-   cursor: pointer;
 }
