@@ -92,6 +92,7 @@ $ultrabold: 800;
 /*styling pt1*/
 
 #pt1 {
+   margin-bottom: 3.125rem;
    h2 {
       text-align: center;
       font-family: "Raleway";
@@ -159,7 +160,7 @@ $ultrabold: 800;
       font-family: "Raleway";
       font-size: 1.25rem;
       font-weight: $ultrabold;
-      letter-spacing: 5.96px;
+      letter-spacing: 0.373rem;
    }
 
    h4 {
@@ -170,30 +171,122 @@ $ultrabold: 800;
       margin-top: 1.188rem;
       margin-bottom: 1.563rem;
    }
-
-   article {
-      width: 117px;
-      height: auto;
-   }
 }
 
-#fig1, #fig2, #fig3{
+#fig1,
+#fig2,
+#fig3 {
    display: block;
    margin: auto;
 }
 
-.moveimg{
+.moveimg {
    position: absolute;
 }
 
-.img1{
+.img1 {
    transform: translateX(-78%);
 }
 
-.img2{
+.img2 {
    transform: translateX(-65%) translateY(30%);
 }
 
-.img3{
+.img3 {
    transform: translateX(-65%) translateY(10%);
+}
+
+/*styling pt2*/
+
+#pt2 {
+   text-align: center;
+   background: #f7f7f7;
+   padding: 40px 30px;
+
+   #pt2__c1,
+   #pt2__c2 {
+      background: #fff;
+      height: auto;
+      display: block;
+      margin: 2.5rem auto;
+      padding: 2.31rem 1.375rem 1.875rem;
+      position: relative;
+      z-index: 0;
+      border-radius: 5px;
+      border: 1px solid #e8e9ed;
+   }
+
+   h2 {
+      font-family: "Raleway";
+      font-size: 1.875rem;
+      font-weight: $normal;
+      text-align: left;
+      margin-top: 1.685rem;
+      padding-bottom: 2.625rem;
+   }
+}
+
+.topimg {
+   position: relative;
+   z-index: 2;
+}
+
+.t1 {
+   color: #000;
+   font-family: "Open Sans";
+   font-size: 0.875rem;
+   font-weight: $normal;
+   text-align: left;
+   margin: 0.625rem auto 0;
+}
+
+.t2 {
+   color: #000;
+   font-family: "Open Sans";
+   font-size: 0.875rem;
+   font-weight: $normal;
+   text-align: left;
+   margin: 0.625rem auto 1.04rem;
+   padding: 1.25rem;
+}
+
+.img4 {
+   z-index: 1;
+   transform: translateX(-85%) translateY(-30%);
+}
+
+.img5 {
+   transform: translateX(-135%) translateY(-5%);
+}
+
+#pt2__c3 {
+   text-align: center;
+   background: #fff;
+   height: auto;
+   display: block;
+   margin: 2.5rem auto;
+   padding: 2.31rem 0 0;
+   position: relative;
+   z-index: 0;
+   border-radius: 5px;
+   border: 1px solid #e8e9ed;
+}
+
+#c3__text {
+   h2 {
+      padding-left: 1.25rem;
+   }
+}
+
+#c3__img {
+   padding-left: 0%;
+   border-radius: 5px;
+   border: 1px solid #e8e9ed;
+   background: #55dfb4;
+   width: auto;
+   height: 195px;
+
+   img {
+      transform: translateX(-58%) translateY(10%);
+   }
 }
