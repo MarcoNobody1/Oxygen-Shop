@@ -182,7 +182,6 @@ $ultrabold: 800;
    button {
       border-radius: 2.5rem;
       background: #08a6e4;
-      box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
       width: 100%;
       height: 31.45%;
       color: #fff;
@@ -191,6 +190,13 @@ $ultrabold: 800;
       font-size: 1rem;
       font-weight: $bold;
       border: none;
+      cursor: pointer;
+      transition: all 250ms ease-out;
+   }
+
+   button:hover{
+      box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+      transform: scale(1.2);
    }
 }
 
