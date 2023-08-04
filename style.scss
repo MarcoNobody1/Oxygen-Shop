@@ -12,8 +12,9 @@ body {
 
 /*variables font-weight*/
 
-$ligth: 300;
+$light: 300;
 $normal: 400;
+$special: 600;
 $bold: 700;
 $ultrabold: 800;
 
@@ -23,11 +24,11 @@ $ultrabold: 800;
    color: $color;
    font-family: "Open Sans";
    font-size: 2.875rem;
-   font-weight: $ligth;
+   font-weight: $light;
    text-align: center;
 }
 
-@mixin cuadroext ($color:rgba(251, 59, 100, 0.29)) {
+@mixin cuadroext($color: rgba(251, 59, 100, 0.29)) {
    position: relative;
    text-align: center;
    display: inline-block;
@@ -37,10 +38,9 @@ $ultrabold: 800;
    transition: transform 300ms ease-out;
    pointer-events: auto;
 
-   :hover{
+   :hover {
       box-shadow: 5px 10px 27px 0px $color;
    }
-
 }
 
 @mixin cuadro($color: #fb3b64) {
@@ -83,7 +83,7 @@ $ultrabold: 800;
    font-family: "Raleway", sans-serif;
    font-size: 2rem;
    font-style: normal;
-   font-weight: $ligth;
+   font-weight: $light;
    display: inline-block;
    width: 85%;
    margin-left: 5%;
@@ -146,7 +146,7 @@ $ultrabold: 800;
       text-align: center;
       font-family: "Raleway";
       font-size: 1.875rem;
-      font-weight: $ligth;
+      font-weight: $light;
       margin: 0.81rem auto 1.56rem;
    }
 
@@ -192,14 +192,14 @@ $ultrabold: 800;
       font-weight: $bold;
       border: none;
    }
+}
 
-   .title {
-      text-align: center;
-      font-family: "Open Sans";
-      font-size: 1rem;
-      font-weight: $normal;
-      margin-bottom: 1.75rem;
-   }
+.title {
+   text-align: center;
+   font-family: "Open Sans";
+   font-size: 1rem;
+   font-weight: $normal;
+   margin-bottom: 1.75rem;
 }
 
 #pt1__figs {
@@ -378,7 +378,7 @@ $ultrabold: 800;
 /*pricing nº2*/
 
 .pr2 {
-   @include cuadroext($color:rgba(7, 172, 230, 0.29) );
+   @include cuadroext($color: rgba(7, 172, 230, 0.29));
 
    button {
       @include boton($color: #07ace6);
@@ -392,7 +392,7 @@ $ultrabold: 800;
 /*pricing nº3*/
 
 .pr3 {
-   @include cuadroext($color:rgba(85, 223, 180, 0.29) );
+   @include cuadroext($color: rgba(85, 223, 180, 0.29));
 
    button {
       @include boton($color: #55dfb4);
@@ -419,7 +419,9 @@ $ultrabold: 800;
 
 /*animación de escala de precios con hover*/
 
-.pr1:hover, .pr2:hover, .pr3:hover{
+.pr1:hover,
+.pr2:hover,
+.pr3:hover {
    transform: scale(1.2);
    z-index: 10;
 }
@@ -441,7 +443,7 @@ $ultrabold: 800;
 
 .offer {
    color: #13253b;
-   font-family: 'Raleway';
+   font-family: "Raleway";
    font-size: 0.75rem;
    font-weight: $bold;
 }
@@ -469,5 +471,128 @@ $ultrabold: 800;
    }
 }
 
-/*styling del formulario*/
+/*styling del contact*/
+
+#pt3__contact {
+   display: inline-block;
+   text-align: center;
+}
+
+.title2 {
+   color: #000;
+   text-align: left;
+   font-family: "Open Sans";
+   font-size: 1rem;
+   font-weight: $normal;
+   margin-bottom: 2.375rem;
+}
+
+#contact__qts {
+   position: relative;
+   text-align: left;
+   ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 3.5rem;
+   }
+
+   li {
+      position: relative;
+      margin-bottom: 0.625rem;
+   }
+
+   p {
+      display: inline-block;
+      color: #a5a5a5;
+      font-family: "Open Sans";
+      font-size: 1rem;
+      font-weight: $special;
+      position: relative;
+      bottom: 0.625rem;
+   }
+}
+
+/*Styling del formulario*/
+
+#formu {
+   color: #000;
+   text-align: left;
+   font-family: "Raleway";
+   font-size: 2.5rem;
+   font-weight: $normal;
+   margin-bottom: 0.313rem;
+}
+
+#contact__inputs {
+   width: 19.5rem;
+   text-align: left;
+   height: 23rem;
+}
+
+.input__title {
+   text-align: left;
+   display: block;
+   color: #08a6e4;
+   font-family: "Open Sans";
+   font-size: 0.688rem;
+   font-weight: $special;
+   letter-spacing: 3.28px;
+}
+
+#name,
+#email {
+   height: 2.624rem;
+   width: 19.5rem;
+   margin-bottom: 2.624rem;
+   border: none;
+   border-bottom: 1px solid #95989a;
+}
+
+#check {
+   width: 1.5rem;
+   height: 1.5rem;
+   margin-right: 0.625rem;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.checkbox__text {
+   width: 17.313rem;
+   display: inline-block;
+   position: relative;
+   color: #707070;
+   font-family: "Open Sans";
+   font-size: 0.75rem;
+   font-weight: $normal;
+   letter-spacing: normal;
+   text-align: left;
+   bottom: 1.875rem;
+   left: 2.25rem;
+   margin-bottom: 2.063rem;
+}
+
+/*styling y animacion extra del botón*/
+
+.f-btn {
+   position: relative;
+   left: 2.594rem;
+   border-radius: 35px;
+   background: #08a6e4;
+   color: #fff;
+   font-family: "Open Sans";
+   font-size: 0.813rem;
+   font-weight: $bold;
+   width: 14.125rem;
+   height: 3.563rem;
+   margin-bottom: 2.75rem;
+   border: none;
+   transition: all 300ms ease-out;
+   cursor: pointer;
+   pointer-events: auto;
+}
+
+.f-btn:hover {
+   transform: scale(1.2);
+   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+}
 
