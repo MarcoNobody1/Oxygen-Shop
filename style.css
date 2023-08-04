@@ -594,4 +594,50 @@ body {
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
 }
 
+/*Styling del footer*/
+#footer {
+  height: 5.563rem;
+  background: #f7f7f7;
+  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+#footer__text {
+  float: left;
+  width: 60vw;
+  text-align: left;
+}
+
+#footer__media {
+  float: right;
+  width: 7.375rem;
+}
+#footer__media img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px;
+  position: relative;
+  margin-top: 2.063rem;
+}
+
+.footer__logo {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  margin: 1.405rem 0 0 1.063rem;
+  color: #08a6e4;
+  font-family: "Raleway";
+  font-size: 1.625rem;
+  font-weight: 300;
+}
+
+.footer__right {
+  color: #a5a5a5;
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 0.688rem;
+  font-weight: 400;
+  margin-left: 1.063rem;
+}
+
 /*# sourceMappingURL=style.css.map */
