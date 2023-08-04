@@ -275,6 +275,7 @@ body {
   text-align: center;
 }
 #pt3 h2 {
+  text-align: center;
   font-family: "Raleway";
   font-size: 2.25rem;
   font-weight: 400;
@@ -282,12 +283,20 @@ body {
   margin-bottom: 0.875rem;
 }
 
+/*pricing nº1*/
 .pr1 {
   position: relative;
+  text-align: center;
   display: inline-block;
   width: 18.313rem;
   height: 17.188rem;
-  margin: 0 5.563rem 3.375rem;
+  margin-bottom: 2.688rem;
+  transition: transform 300ms ease-out;
+  pointer-events: auto;
+  z-index: 1;
+}
+.pr1 :hover {
+  box-shadow: 5px 10px 27px 0px rgba(251, 59, 100, 0.29);
 }
 .pr1 button {
   position: relative;
@@ -301,6 +310,7 @@ body {
   height: 3.125rem;
   transform: translateY(-50%);
   border: none;
+  cursor: pointer;
 }
 
 #pr__red {
@@ -310,10 +320,121 @@ body {
   border: 1px solid #fb3b64;
   background: #fff;
 }
+#pr__red .pr__title {
+  bottom: 2rem;
+}
 
+/*pricing nº2*/
+.pr2 {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 18.313rem;
+  height: 17.188rem;
+  margin-bottom: 2.688rem;
+  transition: transform 300ms ease-out;
+  pointer-events: auto;
+}
+.pr2 :hover {
+  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.29);
+}
+.pr2 button {
+  position: relative;
+  border-radius: 23px;
+  background: #07ace6;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 0.813rem;
+  font-weight: 700;
+  width: 9.375rem;
+  height: 3.125rem;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+
+#pr__blue {
+  width: 100%;
+  height: 15.688rem;
+  border-radius: 18px;
+  border: 1px solid #07ace6;
+  background: #fff;
+}
+
+/*pricing nº3*/
+.pr3 {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 18.313rem;
+  height: 17.188rem;
+  margin-bottom: 2.688rem;
+  transition: transform 300ms ease-out;
+  pointer-events: auto;
+}
+.pr3 :hover {
+  box-shadow: 5px 10px 27px 0px rgba(85, 223, 180, 0.29);
+}
+.pr3 button {
+  position: relative;
+  border-radius: 23px;
+  background: #55dfb4;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 0.813rem;
+  font-weight: 700;
+  width: 9.375rem;
+  height: 3.125rem;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+}
+
+#pr__green {
+  width: 100%;
+  height: 15.688rem;
+  border-radius: 18px;
+  border: 1px solid #55dfb4;
+  background: #fff;
+}
+
+/*styling de los precios de cada oferta*/
+.price1 {
+  color: #fb3b64;
+  font-family: "Open Sans";
+  font-size: 2.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.price2 {
+  color: #07ace6;
+  font-family: "Open Sans";
+  font-size: 2.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.price3 {
+  color: #55dfb4;
+  font-family: "Open Sans";
+  font-size: 2.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/*animación de escala de precios con hover*/
+.pr1:hover, .pr2:hover, .pr3:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/*posicionamiento general de los elementos de cada pricing*/
 .pr__title {
   display: inline-block;
-  text-align: center;
+  width: 8.5rem;
+  position: relative;
+  pointer-events: none;
 }
 .pr__title h3 {
   color: #13253b;
@@ -322,20 +443,22 @@ body {
   font-weight: 700;
 }
 
-.price1 {
-  color: #fb3b64;
-  font-family: "Open Sans";
-  font-size: 2.875rem;
-  font-weight: 300;
+.offer {
+  color: #13253b;
+  font-family: "Raleway";
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .pr__list {
   display: inline-block;
+  position: relative;
   text-align: left;
+  top: 1.25rem;
+  pointer-events: none;
 }
 .pr__list ul {
   list-style: none;
-  margin-top: 20px;
 }
 .pr__list h5 {
   display: inline-block;
@@ -347,5 +470,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
 }
+
+/*styling del formulario*/
 
 /*# sourceMappingURL=style.css.map */

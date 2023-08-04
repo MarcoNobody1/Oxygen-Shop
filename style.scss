@@ -24,14 +24,23 @@ $ultrabold: 800;
    font-family: "Open Sans";
    font-size: 2.875rem;
    font-weight: $ligth;
+   text-align: center;
 }
 
-@mixin cuadroext{
+@mixin cuadroext ($color:rgba(251, 59, 100, 0.29)) {
    position: relative;
+   text-align: center;
    display: inline-block;
    width: 18.313rem;
    height: 17.188rem;
-   margin: 0 5.563rem 3.375rem ;
+   margin-bottom: 2.688rem;
+   transition: transform 300ms ease-out;
+   pointer-events: auto;
+
+   :hover{
+      box-shadow: 5px 10px 27px 0px $color;
+   }
+
 }
 
 @mixin cuadro($color: #fb3b64) {
@@ -54,6 +63,7 @@ $ultrabold: 800;
    height: 3.125rem;
    transform: translateY(-50%);
    border: none;
+   cursor: pointer;
 }
 
 /* Styling de todo el header*/
@@ -337,6 +347,7 @@ $ultrabold: 800;
    text-align: center;
 
    h2 {
+      text-align: center;
       font-family: "Raleway";
       font-size: 2.25rem;
       font-weight: $normal;
@@ -345,8 +356,11 @@ $ultrabold: 800;
    }
 }
 
+/*pricing nº1*/
+
 .pr1 {
    @include cuadroext;
+   z-index: 1;
 
    button {
       @include boton;
@@ -355,11 +369,68 @@ $ultrabold: 800;
 
 #pr__red {
    @include cuadro;
+
+   .pr__title {
+      bottom: 2rem;
+   }
 }
+
+/*pricing nº2*/
+
+.pr2 {
+   @include cuadroext($color:rgba(7, 172, 230, 0.29) );
+
+   button {
+      @include boton($color: #07ace6);
+   }
+}
+
+#pr__blue {
+   @include cuadro($color: #07ace6);
+}
+
+/*pricing nº3*/
+
+.pr3 {
+   @include cuadroext($color:rgba(85, 223, 180, 0.29) );
+
+   button {
+      @include boton($color: #55dfb4);
+   }
+}
+
+#pr__green {
+   @include cuadro($color: #55dfb4);
+}
+
+/*styling de los precios de cada oferta*/
+
+.price1 {
+   @include precio;
+}
+
+.price2 {
+   @include precio($color: #07ace6);
+}
+
+.price3 {
+   @include precio($color: #55dfb4);
+}
+
+/*animación de escala de precios con hover*/
+
+.pr1:hover, .pr2:hover, .pr3:hover{
+   transform: scale(1.2);
+   z-index: 10;
+}
+
+/*posicionamiento general de los elementos de cada pricing*/
 
 .pr__title {
    display: inline-block;
-   text-align: center;
+   width: 8.5rem;
+   position: relative;
+   pointer-events: none;
    h3 {
       color: #13253b;
       font-family: "Raleway";
@@ -368,17 +439,22 @@ $ultrabold: 800;
    }
 }
 
-.price1 {
-   @include precio;
+.offer {
+   color: #13253b;
+   font-family: 'Raleway';
+   font-size: 0.75rem;
+   font-weight: $bold;
 }
 
 .pr__list {
    display: inline-block;
+   position: relative;
    text-align: left;
-   
-   ul{
+   top: 1.25rem;
+   pointer-events: none;
+
+   ul {
       list-style: none;
-      margin-top: 20px;
    }
 
    h5 {
@@ -392,3 +468,6 @@ $ultrabold: 800;
       font-weight: $normal;
    }
 }
+
+/*styling del formulario*/
+
