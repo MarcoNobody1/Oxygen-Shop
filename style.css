@@ -11,7 +11,7 @@ body {
 }
 
 /*variables font-weight*/
-/*mixing para colores de los precios*/
+/*mixin para pricing*/
 /* Styling de todo el header*/
 #header {
   background: #fff;
@@ -285,13 +285,12 @@ body {
 .pr1 {
   position: relative;
   display: inline-block;
-  width: auto;
+  width: 18.313rem;
   height: 17.188rem;
-  margin: 0 5.563rem;
-  text-align: center;
+  margin: 0 5.563rem 3.375rem;
 }
 .pr1 button {
-  position: absolute;
+  position: relative;
   border-radius: 23px;
   background: #eb476e;
   color: #fff;
@@ -300,26 +299,21 @@ body {
   font-weight: 700;
   width: 9.375rem;
   height: 3.125rem;
-  padding: auto;
-  z-index: 2;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateY(-50%);
   border: none;
 }
 
 #pr__red {
-  display: block;
+  width: 100%;
+  height: 15.688rem;
   border-radius: 18px;
   border: 1px solid #fb3b64;
   background: #fff;
-  position: relative;
-  z-index: 1;
-  text-align: left;
 }
 
 .pr__title {
   display: inline-block;
-  width: 9.188rem;
-  text-align: left;
+  text-align: center;
 }
 .pr__title h3 {
   color: #13253b;
@@ -335,23 +329,23 @@ body {
   font-weight: 300;
 }
 
-.pr__marks {
-  display: inline-block;
-  width: 0.688rem;
-  text-align: left;
-  margin-top: 1.813rem;
-  margin-right: 0.625rem;
-}
-.pr__marks img {
-  padding-bottom: 1.75rem;
-}
-
 .pr__list {
   display: inline-block;
-  width: 5rem;
+  text-align: left;
+}
+.pr__list ul {
+  list-style: none;
+  margin-top: 20px;
 }
 .pr__list h5 {
-  padding-bottom: 1.75rem;
+  display: inline-block;
+  margin-left: 0.625rem;
+  margin-bottom: 1.25rem;
+  color: #000;
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

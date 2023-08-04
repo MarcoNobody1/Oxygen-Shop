@@ -17,13 +17,43 @@ $normal: 400;
 $bold: 700;
 $ultrabold: 800;
 
-/*mixing para colores de los precios*/
+/*mixin para pricing*/
 
 @mixin precio($color: #fb3b64) {
    color: $color;
    font-family: "Open Sans";
    font-size: 2.875rem;
    font-weight: $ligth;
+}
+
+@mixin cuadroext{
+   position: relative;
+   display: inline-block;
+   width: 18.313rem;
+   height: 17.188rem;
+   margin: 0 5.563rem 3.375rem ;
+}
+
+@mixin cuadro($color: #fb3b64) {
+   width: 100%;
+   height: 15.688rem;
+   border-radius: 18px;
+   border: 1px solid $color;
+   background: #fff;
+}
+
+@mixin boton($color: #eb476e) {
+   position: relative;
+   border-radius: 23px;
+   background: $color;
+   color: #fff;
+   font-family: "Open Sans";
+   font-size: 0.813rem;
+   font-weight: $bold;
+   width: 9.375rem;
+   height: 3.125rem;
+   transform: translateY(-50%);
+   border: none;
 }
 
 /* Styling de todo el header*/
@@ -316,45 +346,20 @@ $ultrabold: 800;
 }
 
 .pr1 {
-   position: relative;
-   display: inline-block;
-   width: auto;
-   height: 17.188rem;
-   margin: 0 5.563rem;
-   text-align: center;
-   
+   @include cuadroext;
+
    button {
-      position: absolute;
-      border-radius: 23px;
-      background: #eb476e;
-      color: #fff;
-      font-family: "Open Sans";
-      font-size: 0.813rem;
-      font-weight: $bold;
-      width: 9.375rem;
-      height: 3.125rem;
-      padding: auto;
-      z-index: 2;
-      transform: translateX(-50%) translateY(-50%);
-      border: none;
+      @include boton;
    }
 }
 
 #pr__red {
-   display: block;
-   border-radius: 18px;
-   border: 1px solid #fb3b64;
-   background: #fff;
-   position: relative;
-   z-index: 1;
-   text-align: left;
+   @include cuadro;
 }
 
 .pr__title {
    display: inline-block;
-   width: 9.188rem;
-   text-align: left;
-
+   text-align: center;
    h3 {
       color: #13253b;
       font-family: "Raleway";
@@ -367,22 +372,23 @@ $ultrabold: 800;
    @include precio;
 }
 
-.pr__marks{
+.pr__list {
    display: inline-block;
-   width: 0.688rem;
    text-align: left;
-   margin-top: 1.813rem;
-   margin-right: 0.625rem;
-   img{
-      padding-bottom: 1.75rem;
+   
+   ul{
+      list-style: none;
+      margin-top: 20px;
    }
-}
 
-.pr__list{
-   display: inline-block;
-   width:5rem;
-
-   h5{
-      padding-bottom: 1.75rem;
+   h5 {
+      display: inline-block;
+      margin-left: 0.625rem;
+      margin-bottom: 1.25rem;
+      color: #000;
+      text-align: left;
+      font-family: "Open Sans";
+      font-size: 0.875rem;
+      font-weight: $normal;
    }
 }
