@@ -15,7 +15,7 @@
 
 <body>
     <header id="header">
-        <p id="header__logo">OXYGENShop</p>
+       <a href="./index.html"><p id="header__logo">OXYGENShop</p></a>
         <img src="/Proyecto1/resources/svg/menu.svg" class="header__menu" alt="icono de menu">
         <nav class="header__nav hidden">
             <a href="#pt1">
@@ -197,6 +197,7 @@
             <p id="formu">Any questions?</p>
             <p class="title2">Leave your email address or call us!</p>
             <div id="contact__qts">
+                <form >
                 <ul>
                     <li><img src="/Proyecto1/resources/svg/mail.svg" alt="icono de carta">
                         <p class="inf">info@bestshop.xyz</p>
@@ -208,27 +209,28 @@
             </div>
             <div id="contact__inputs">
                 <label for="name" class="input__title">NAME</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
                 <label for="email" class="input__title">EMAIL</label>
-                <input type="email" name="email" id="email">
-                <input placeholder="-" type="checkbox" name="check" id="check">
-                <p class="checkbox__text">I hereby give consent for my personal data included in my
+                <input type="email" name="email" id="email" required>
+                <input aria-label="chekbox" type="checkbox" name="check" class="check" required>
+                <label for="check" class="checkbox__text" >I hereby give consent for my personal data included in my
                     application to be processed for the purposes of the recruitment process under the European
                     Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of
                     27 April 2016, with regard to the processing of personal data and on the free movement of such data,
-                    and repealing Directive 95/46/EC (Data Protection Directive)</p>
+                    and repealing Directive 95/46/EC (Data Protection Directive)</label>
             </div>
             <button type="submit" class="f-btn">Send</button>
+        </form>
         </article>
     </section>
     <footer id="footer">
         <section id="footer__text">
-        <p class="footer__logo">OXYGENShop</p>
+        <a href="./index.html"><p class="footer__logo">OXYGENShop</p></a>
         <p class="footer__right">© 2022 OXYGEN, All Rights Reserved</p>
     </section>
     <section id="footer__media">
-        <img src="/Proyecto1/resources/svg/twitter.svg" alt="icono de twitter">
-        <img src="/Proyecto1/resources/svg/facebook.svg" alt="icono de facebook">
+        <a aria-label="twiter" class="twitter" href="https://twitter.com/o2es" target="_blank"rel="noopener" ></a>
+        <a aria-label="facebook" class="facebook" href="https://www.facebook.com/o2es/" target="_blank" rel="noopener"></a>
     </section>
     </footer>
 </body>
