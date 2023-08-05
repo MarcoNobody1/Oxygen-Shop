@@ -12,6 +12,7 @@ body {
 
 /*variables font-weight*/
 /*mixin para pricing*/
+/*mixin para iconos de media*/
 /* Styling de todo el header*/
 #header {
   background: #fff;
@@ -506,6 +507,10 @@ body {
 #contact__qts li {
   position: relative;
   margin-bottom: 0.625rem;
+  cursor: pointer;
+}
+#contact__qts p:hover {
+  color: #000;
 }
 #contact__qts p {
   display: inline-block;
@@ -542,6 +547,9 @@ body {
   font-weight: 600;
   letter-spacing: 3.28px;
 }
+.input__title :focus {
+  outline: none;
+}
 
 #name,
 #email {
@@ -552,12 +560,19 @@ body {
   border-bottom: 1px solid #95989a;
 }
 
-#check {
+.check {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.625rem;
   display: inline-block;
   cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #95989a;
+}
+
+.check:active {
+  background-color: red;
+  color: #08a6e4;
 }
 
 .checkbox__text {
@@ -617,12 +632,39 @@ body {
   float: right;
   width: 7.375rem;
 }
-#footer__media img {
-  display: inline-block;
+#footer__media a {
   vertical-align: middle;
   margin: 10px;
   position: relative;
   margin-top: 2.063rem;
+}
+
+.twitter {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(/Proyecto1/resources/svg/twitter.svg);
+  background-size: cover;
+  position: relative;
+  transition: all 300ms ease-out;
+}
+
+.twitter:hover {
+  background-image: url(/Proyecto1/resources/svg/twitter-x.svg);
+}
+
+.facebook {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(/Proyecto1/resources/svg/facebook.svg);
+  background-size: cover;
+  position: relative;
+  transition: all 300ms ease-out;
+}
+
+.facebook:hover {
+  background-image: url(/Proyecto1/resources/svg/facebook-meta.svg);
 }
 
 .footer__logo {
