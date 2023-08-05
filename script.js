@@ -1,6 +1,6 @@
 // Declaracion de variables
-const menu = document.querySelector(".header__menu");
-const nav = document.querySelector(".header__nav");
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
 
 // Evento para expandir o contraer el nav
 
