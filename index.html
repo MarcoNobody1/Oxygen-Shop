@@ -16,8 +16,11 @@
 
 <body>
     <header id="header">
-       <a href="./index.html"><p id="header__logo">OXYGENShop</p></a>
-        <img onclick="desplegarMenu()" src="/Proyecto1/resources/svg/menu.svg" id="menu" class="header__menu" alt="icono de menu">
+        <a href="./index.html">
+            <p id="header__logo">OXYGENShop</p>
+        </a>
+        <img onclick="desplegarMenu()" src="/Proyecto1/resources/svg/menu.svg" id="menu" class="header__menu ocult"
+            alt="icono de menu">
         <nav class="hidden header__nav" id="nav">
             <a href="#pt1">
                 <h6>Why us</h6>
@@ -35,13 +38,13 @@
     </header>
     <section id="pt1">
         <section id="pt1__intro">
-            <h1>Sell More!</h1>
+            <h1 id="intro__title">Sell More!</h1>
             <p class="title">Open shop on our platform and
                 increase your sales</p>
             <button type="submit" class="shop-btn">Open your shop</button>
         </section>
         <figure>
-            <img class="imgbg" src="/Proyecto1/resources/img/Background-app.png" alt="imagen de fondo">
+            <img class="imgbg" src="/Proyecto1/resources/img/Background.png" alt="imagen de fondo">
         </figure>
         <h2>The most popular sales platform in country</h2>
         <section id="pt1__figs">
@@ -67,26 +70,36 @@
     </section>
     <section id="pt2">
         <article id="pt2__c1">
-            <img class="topimg" src="/Proyecto1/resources/img/macbook.png" alt="mackbook">
-            <img class="moveimg img4" src="/Proyecto1/resources/svg/svg-c1.svg" alt="elipse roja">
-            <h2>Be always first</h2>
-            <p class="t1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="328" height="4" viewBox="0 0 328 4"
-                fill="none">
-                <path d="M0 2H327.64" stroke="#FB3B64" stroke-width="4" />
-            </svg>
+            <div class="c1__imgs">
+                <img class="topimg" id="topimg1" src="/Proyecto1/resources/img/macbook.png" alt="mackbook">
+                <img class="moveimg img4" id="backimg1" src="/Proyecto1/resources/svg/svg-c1.svg" alt="elipse roja">
+            </div>
+            <div class="c1__text">
+                <h2>Be always first</h2>
+                <p class="t1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <svg class="hidden" id="svg1" xmlns="http://www.w3.org/2000/svg" width="328" height="4"
+                    viewBox="0 0 328 4" fill="none">
+                    <path d="M0 2H327.64" stroke="#FB3B64" stroke-width="4" />
+                </svg>
+            </div>
         </article>
         <article id="pt2__c2">
-            <img class="topimg" src="/Proyecto1/resources/img/iPhone.png" alt="iPhone">
-            <img class="moveimg img5" src="/Proyecto1/resources/svg/svg-c2.svg" alt="elipse azul">
-            <h2>Your shop is where you are!</h2>
-            <p class="t1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="328" height="4" viewBox="0 0 328 4"
-                fill="none">
-                <path d="M0 2H327.64" stroke="#08A6E4" stroke-width="4" />
-            </svg>
+            <div class="c2__imgs">
+                <img class="topimg" id="topmig2" src="/Proyecto1/resources/img/iPhone.png" alt="iPhone">
+                <img class="moveimg img5" id="backimg2" src="/Proyecto1/resources/svg/svg-c2.svg" alt="elipse azul">
+            </div>
+            <div class="c2__text">
+                <h2>Your shop is where you are!</h2>
+                <p class="t1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <svg class="hidden" id="svg2" xmlns="http://www.w3.org/2000/svg" width="328" height="4"
+                    viewBox="0 0 328 4" fill="none">
+                    <path d="M0 2H327.64" stroke="#08A6E4" stroke-width="4" />
+                </svg>
+            </div>
         </article>
         <article id="pt2__c3">
             <div id="c3__text">
@@ -198,15 +211,15 @@
             <p id="formu">Any questions?</p>
             <p class="title2">Leave your email address or call us!</p>
             <div id="contact__qts">
-                <form >
-                <ul>
-                    <li><img src="/Proyecto1/resources/svg/mail.svg" alt="icono de carta">
-                        <p class="inf">info@bestshop.xyz</p>
-                    </li>
-                    <li><img src="/Proyecto1/resources/svg/phone.svg" alt="icono de telefono">
-                        <p class="inf">123 456 789</p>
-                    </li>
-                </ul>
+                <form>
+                    <ul>
+                        <li><img src="/Proyecto1/resources/svg/mail.svg" alt="icono de carta">
+                            <p class="inf">info@bestshop.xyz</p>
+                        </li>
+                        <li><img src="/Proyecto1/resources/svg/phone.svg" alt="icono de telefono">
+                            <p class="inf">123 456 789</p>
+                        </li>
+                    </ul>
             </div>
             <div id="contact__inputs">
                 <label for="name" class="input__title">NAME</label>
@@ -214,25 +227,28 @@
                 <label for="email" class="input__title">EMAIL</label>
                 <input type="email" name="email" id="email" required>
                 <input aria-label="chekbox" type="checkbox" name="check" class="check" required>
-                <label for="check" class="checkbox__text" >I hereby give consent for my personal data included in my
+                <label for="check" class="checkbox__text">I hereby give consent for my personal data included in my
                     application to be processed for the purposes of the recruitment process under the European
                     Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of
                     27 April 2016, with regard to the processing of personal data and on the free movement of such data,
                     and repealing Directive 95/46/EC (Data Protection Directive)</label>
             </div>
             <button type="submit" class="f-btn">Send</button>
-        </form>
+            </form>
         </article>
     </section>
     <footer id="footer">
         <section id="footer__text">
-        <a href="./index.html"><p class="footer__logo">OXYGENShop</p></a>
-        <p class="footer__right">© 2022 OXYGEN, All Rights Reserved</p>
-    </section>
-    <section id="footer__media">
-        <a aria-label="twiter" class="twitter" href="https://twitter.com/o2es" target="_blank"rel="noopener" ></a>
-        <a aria-label="facebook" class="facebook" href="https://www.facebook.com/o2es/" target="_blank" rel="noopener"></a>
-    </section>
+            <a href="./index.html">
+                <p class="footer__logo">OXYGENShop</p>
+            </a>
+            <p class="footer__right">© 2022 OXYGEN, All Rights Reserved</p>
+        </section>
+        <section id="footer__media">
+            <a aria-label="twiter" class="twitter" href="https://twitter.com/o2es" target="_blank" rel="noopener"></a>
+            <a aria-label="facebook" class="facebook" href="https://www.facebook.com/o2es/" target="_blank"
+                rel="noopener"></a>
+        </section>
     </footer>
 </body>
 
