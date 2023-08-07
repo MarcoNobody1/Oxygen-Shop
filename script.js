@@ -10,9 +10,9 @@ const backimg = document.getElementById("backimg1")
 function desplegarMenu(){
     nav.classList.toggle("hidden");
     if (menu.src.includes(menuNow)){
-        menu.src = "/Proyecto1/resources/svg/x-menu.svg";
+        menu.src = "./resources/svg/x-menu.svg";
     } else if (menu.src.includes(menuThen)){
-        menu.src = "/Proyecto1/resources/svg/menu.svg";
+        menu.src = "./resources/svg/menu.svg";
     }
 };
 
@@ -22,8 +22,8 @@ window.addEventListener("resize", cambiarImagen)
 
 function cambiarImagen(){
     if (window.innerWidth > 999) {
-        backimg.src = "/Proyecto1/resources/svg/Rectangle-web.svg";
+        backimg.src = "./resources/svg/Rectangle-web.svg";
     } else {
-        backimg.src = "/Proyecto1/resources/svg/svg-c1.svg";
+        backimg.src = "./resources/svg/svg-c1.svg";
     }
 }

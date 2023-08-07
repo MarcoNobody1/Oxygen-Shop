@@ -652,28 +652,28 @@ body {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url(/Proyecto1/resources/svg/twitter.svg);
+  background-image: url(./resources/svg/twitter.svg);
   background-size: cover;
   position: relative;
   transition: all 300ms ease-out;
 }
 
 .twitter:hover {
-  background-image: url(/Proyecto1/resources/svg/twitter-x.svg);
+  background-image: url(./resources/svg/twitter-x.svg);
 }
 
 .facebook {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url(/Proyecto1/resources/svg/facebook.svg);
+  background-image: url(./resources/svg/facebook.svg);
   background-size: cover;
   position: relative;
   transition: all 300ms ease-out;
 }
 
 .facebook:hover {
-  background-image: url(/Proyecto1/resources/svg/facebook-meta.svg);
+  background-image: url(./resources/svg/facebook-meta.svg);
 }
 
 .footer__logo {

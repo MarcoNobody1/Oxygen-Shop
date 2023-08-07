@@ -69,7 +69,7 @@ $ultrabold: 800;
 
 /*mixin para iconos de media*/
 
-@mixin icono($icono: url(/Proyecto1/resources/svg/twitter.svg)) {
+@mixin icono($icono: url(./resources/svg/twitter.svg)) {
    display: inline-block;
    width: 1.5rem;
    height: 1.5rem;
@@ -678,15 +678,15 @@ $ultrabold: 800;
 }
 
 .twitter:hover {
-   background-image: url(/Proyecto1/resources/svg/twitter-x.svg);
+   background-image: url(./resources/svg/twitter-x.svg);
 }
 
 .facebook {
-   @include icono($icono: url(/Proyecto1/resources/svg/facebook.svg));
+   @include icono($icono: url(./resources/svg/facebook.svg));
 }
 
 .facebook:hover {
-   background-image: url(/Proyecto1/resources/svg/facebook-meta.svg);
+   background-image: url(./resources/svg/facebook-meta.svg);
 }
 
 .footer__logo {
