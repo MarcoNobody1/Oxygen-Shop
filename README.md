@@ -27,7 +27,7 @@ body {
     min-width: 320px;
 }
 ```
-* Poner esta etiqueta dentro del "<head>":
+* Poner esta etiqueta dentro del "< head >":
 ```bash
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
