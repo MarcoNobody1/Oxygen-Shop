@@ -27,7 +27,7 @@ body {
     min-width: 320px;
 }
 ```
-* Poner esta etiqueta dentro del <head>:
+* Poner esta etiqueta dentro del "<head>":
 ```bash
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
@@ -40,7 +40,7 @@ body {
 
 A parte de los requisitos que pedía el proyecto, se han añadido otras funcionalidades al proyecto tales como:
 
-+ Al hacer click tanto en el **logo del header** como en el **logo del footer**, la página te redireccionará al *index.html*.
++ Al hacer *click* tanto en el **logo del header** como en el **logo del footer**, la página te redireccionará al *index.html*.
 + Al hacer *hover* por encima de los elementos del **nav**, estos cambian su color. En la versión web, a parte de cambiar de color, también se destacará *una barra azul* en la parte de abajo de cada elemento.
 + Todos los **botones** cuentan con una transición al hacer *hover* por encima de ellos (se agrandan y se iluminan).
 + Al hacer *hover* por encima de la **información de contacto**, esta cambia de color (el email y el teléfono).
