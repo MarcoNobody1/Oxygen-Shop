@@ -25,6 +25,7 @@ body {
   position: relative;
 }
 
+/*Styling del logo*/
 #header__logo {
   color: #08a6e4;
   font-family: "Raleway", sans-serif;
@@ -37,6 +38,7 @@ body {
   text-decoration: none;
 }
 
+/*Styling del nav*/
 .header__nav {
   display: block;
   float: left;
@@ -96,6 +98,7 @@ body {
   position: relative;
 }
 
+/*Styling de la imagen de fondo*/
 .imgbg {
   position: absolute;
   left: 50%;
@@ -104,6 +107,7 @@ body {
   height: 267px;
 }
 
+/*Styling de la intro de pt1*/
 #pt1__intro {
   display: block;
   margin: 6.25rem auto;
@@ -146,6 +150,7 @@ body {
   margin-bottom: 1.75rem;
 }
 
+/*Styling de las figuras dentro de pt1*/
 #pt1__figs {
   text-align: center;
 }
@@ -192,6 +197,7 @@ body {
   text-align: center;
   background: #f7f7f7;
   padding: 40px 30px;
+  /*Styling general para las celdas 1 y 2*/
 }
 #pt2 #pt2__c1,
 #pt2 #pt2__c2 {
@@ -214,12 +220,8 @@ body {
   padding-bottom: 2.625rem;
 }
 
-.topimg {
-  position: relative;
-  z-index: 2;
-}
-
-.t1, .t1_1 {
+.t1,
+.t1_1 {
   color: #000;
   font-family: "Open Sans";
   font-size: 0.875rem;
@@ -238,6 +240,12 @@ body {
   padding: 1.25rem;
 }
 
+/*Styling para las imágenes de las celdas*/
+.topimg {
+  position: relative;
+  z-index: 2;
+}
+
 .img4 {
   z-index: 1;
   transform: translateX(-85%) translateY(-30%);
@@ -247,6 +255,7 @@ body {
   transform: translateX(-135%) translateY(-5%);
 }
 
+/*styling de celda 3*/
 #pt2__c3 {
   text-align: center;
   background: #fff;
@@ -480,7 +489,7 @@ body {
   font-weight: 400;
 }
 
-/*styling del contact*/
+/*Styling del contact*/
 #pt3__contact {
   display: inline-block;
   text-align: center;
@@ -590,7 +599,7 @@ body {
   margin-bottom: 2.063rem;
 }
 
-/*styling y animacion extra del botón*/
+/*Styling y animacion extra del botón*/
 .f-btn {
   position: relative;
   left: 2.594rem;
@@ -687,12 +696,13 @@ body {
   margin-left: 1.063rem;
 }
 
-/*clase hidden condicional al ancho de pantalla */
+/*Clase hidden condicional al ancho de pantalla */
 @media only screen and (max-width: 1000px) {
   .hidden {
     display: none;
   }
 }
+/*Media query intermedia para controlar el ancho del pricing */
 @media only screen and (min-width: 1000px) and (max-width: 1265px) {
   /*Styling pricing pt3*/
   .pr1,
@@ -711,6 +721,7 @@ body {
   .ocult {
     display: none;
   }
+  /*Styling del header (web)*/
   #header {
     background: #fff;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.29);
@@ -768,7 +779,7 @@ body {
   .header__nav a {
     text-decoration: none;
   }
-  /*styling pt1*/
+  /*styling pt1 (web)*/
   #pt1 {
     display: grid;
     height: 85.875rem;
@@ -803,10 +814,12 @@ body {
   .title {
     margin-bottom: 2.375rem;
   }
+  /*Styling de la imagen de fondo (web)*/
   .imgbg {
     width: 108.438rem;
     height: 37.125rem;
   }
+  /*Styling de las figuras de pt1 (web)*/
   #pt1__figs {
     display: flex;
     flex-direction: row;
@@ -817,18 +830,19 @@ body {
   #fig3 {
     margin: 0;
   }
-  /*styling pt2*/
+  /*styling pt2 (web)*/
   #pt2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #f7f7f7;
-    padding: 6.563rem 30px;
-    height: 101.688rem;
+    padding: 0 30px;
+    height: 87.188rem;
+    justify-content: center;
     gap: 2.313rem;
-    /*styling celda 1*/
-    /*styling celda 2*/
-    /*styling celda 3*/
+    /*styling celda 1 (web)*/
+    /*styling celda 2 (web)*/
+    /*styling celda 3 (web)*/
   }
   #pt2 #pt2__c1 {
     width: 69%;
@@ -849,6 +863,8 @@ body {
   #pt2 .t1 {
     margin-left: 2.25rem;
     margin-top: 1.875rem;
+    font-size: 1rem;
+    width: 80%;
   }
   #pt2 #svg1 {
     margin-top: 3.125rem;
@@ -869,6 +885,10 @@ body {
   #pt2 #topimg1 {
     width: 386.44px;
     height: 219px;
+    transform: translateX(0%) translateY(50%);
+  }
+  #pt2 #backimg1 {
+    transform: translateX(-80%) translateY(20%);
   }
   #pt2 #pt2__c2 {
     width: 69%;
@@ -884,9 +904,13 @@ body {
     margin-right: 0;
     margin-top: 0;
     padding: 0;
+    width: 80%;
   }
   #pt2 .t1_1 {
-    margin-top: 1.875rem;
+    display: flex;
+    margin: 1.875rem 0 0 0;
+    font-size: 1rem;
+    width: 70%;
   }
   #pt2 #svg2 {
     margin-top: 3.125rem;
@@ -907,12 +931,69 @@ body {
   #pt2 #topimg2 {
     width: 426px;
     height: 328px;
+    transform: translateX(0%) translateY(10%);
   }
   #pt2 #backimg2 {
     width: 20rem;
     height: 20rem;
+    transform: translateX(-135%) translateY(5%);
   }
-  /*Styling pt3*/
+  #pt2 #pt2__c3 {
+    width: 69%;
+    height: 23.125rem;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.81rem;
+    background: none;
+  }
+  #pt2 #c3__text {
+    flex-basis: 60%;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #pt2 #c3__text h2 {
+    width: 60%;
+    font-size: 2.25rem;
+    margin-left: 2.25rem;
+    margin-top: 0;
+    padding: 0;
+  }
+  #pt2 .t2 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 2.25rem;
+    margin-top: 1.875rem;
+    font-size: 1rem;
+    width: 70%;
+  }
+  #pt2 #svg3 {
+    margin-top: 3.125rem;
+    margin-left: 2.25rem;
+  }
+  #pt2 #c3__img {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    height: 370px;
+    border-radius: 5px;
+    border: 1px solid #e8e9ed;
+    background: #55dfb4;
+  }
+  #pt2 #c3__img img {
+    transform: translateX(-10%) translateY(10%);
+  }
+  /*Styling pt3 (web)*/
   #pt3 {
     display: flex;
     flex-direction: column;
@@ -926,7 +1007,7 @@ body {
     margin-bottom: 4.438rem;
     margin-top: 7.969rem;
   }
-  /*styling pricing*/
+  /*styling pricing (web)*/
   #pt3__pricing {
     display: flex;
     gap: 4.688rem;
@@ -961,7 +1042,7 @@ body {
     display: flex;
     text-align: center;
   }
-  /*styling formulario*/
+  /*styling formulario (web)*/
   #pt3__contact {
     width: 56rem;
     height: 27.188rem;
@@ -1045,7 +1126,7 @@ body {
     cursor: pointer;
     pointer-events: auto;
   }
-  /*styling del footer*/
+  /*styling del footer (web)*/
   #footer__text {
     float: left;
     width: 60vw;
