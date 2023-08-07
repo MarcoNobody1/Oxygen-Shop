@@ -1,18 +1,16 @@
 // Declaracion de variables
-const menu = document.getElementById("menu");
 const nav = document.getElementById("nav");
 const backimg = document.getElementById("backimg1")
 
 // Evento para expandir o contraer el nav y cambiar la img
 
-function desplegarMenu() {
-    let menuNow = "./resources/svg/menu.svg";
-    let menuThen = "./resources/svg/x-menu.svg";
+  function desplegarMenu() {
+    var menu = document.getElementById("menu");
     nav.classList.toggle("hidden");
-    if (menu.getAttribute("src") === menuNow) {
-      menu.setAttribute("src", menuThen);
+    if (menu.getAttribute("src") === "./resources/svg/menu.svg") {
+      menu.setAttribute("src", "./resources/svg/x-menu.svg");
     } else {
-      menu.setAttribute("src", menuNow);
+      menu.setAttribute("src", "./resources/svg/menu.svg");
     }
   }
 
