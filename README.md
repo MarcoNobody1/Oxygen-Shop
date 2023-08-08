@@ -2,7 +2,7 @@
 
 Proyecto OXYGENShop es un proyecto de programación enfocado a la sintáxis semántica en HTML, la utilización del preprocesador SASS para generar el código CSS y el uso de la metodología BEM a la hora de nombrar las clases.
 
-## Objetivo del proyecto
+## Objetivo del Proyecto
 
 El objetivo del proyecto es demostrar los conocimientos sobre los lenguajes de programación y metodologías mencionadas anteriormente, a la vez que se siguen unos requisitos para duplicar el diseño de una página web responsive. Esta debe funcionar acorde a  la anchura de todos los dispositivos utilizando media queries para obtener un resultado limpio y ordenado.
 Ej:
@@ -11,7 +11,7 @@ Ej:
 @media only screen and (min-width: 1000px) {}
 ```
 
-## Requisitos del proyecto
+## Requisitos del Proyecto
 
 Los requisitos a seguir para cumplir los objetivos del proyecto son los siguientes:
 
@@ -36,7 +36,7 @@ body {
 * No utilizar flex ni grid en la versión móvil, y luego utilizarlo en la versión desktop.
 * Utilizar "medidas responsive" (intentar no utilizar px, ni position absolute y, en su lugar, utilizar "%" o "rem").
 
-## Requisitos extra
+## Requisitos Extra
 
 A parte de los requisitos que pedía el proyecto, se han añadido otras funcionalidades al proyecto tales como:
 
@@ -57,3 +57,7 @@ A parte de los requisitos que pedía el proyecto, se han añadido otras funciona
 El objetivo de esto es que, al probar el diseño responsive, toda la página haga una pequeña "animación de adaptación" al pasar por los puntos de media query.
 
 Es por el simple << disfrute del developer >>.
+
+## Actualizaciones // Nuevas Funciones
+
+* (08/08/2023 14:09) Se añade nueva función a la barra del menú en Desktop y App. Ahora te acompaña en todo tu recorrido por la web.
