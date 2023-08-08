@@ -4,6 +4,7 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   scroll-behavior: smooth;
    transition: all 200ms ease-out;
 }
 
@@ -85,10 +86,11 @@ $ultrabold: 800;
    background: #fff;
    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.29);
    display: inline-block;
-   height: 70px;
+   height: 4.375rem;
    width: 100%;
-   padding-top: 17px;
-   position: relative;
+   position: fixed;
+   z-index: 100;
+   top: 0;
 }
 
 /*Styling del logo*/
@@ -100,6 +102,7 @@ $ultrabold: 800;
    font-style: normal;
    font-weight: $light;
    display: inline-block;
+   padding-top: 1.063rem;
    width: 85%;
    margin-left: 5%;
    text-decoration: none;
@@ -751,8 +754,9 @@ $ultrabold: 800;
       height: 70px;
       width: 100%;
       padding-top: 0;
-      position: relative;
+      position: fixed;
       grid-template-columns: 50% 50%;
+      top: 0;
    }
 
    #header__logo {
