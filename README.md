@@ -61,3 +61,4 @@ Es por el simple << disfrute del developer >>.
 ## Actualizaciones // Nuevas Funciones
 
 * (08/08/2023 14:09) Se añade nueva función a la barra del menú en Desktop y App. Ahora te acompaña en todo tu recorrido por la web.
+* (10/072023 13:56) Correjida sintaxis de HTML del footer.

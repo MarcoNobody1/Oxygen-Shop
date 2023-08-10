@@ -688,6 +688,7 @@ body {
   font-family: "Raleway";
   font-size: 1.625rem;
   font-weight: 300;
+  text-decoration: none;
 }
 
 .footer__right {
