@@ -16,6 +16,14 @@ body {
 /*mixin para pricing*/
 /*mixin para iconos de media*/
 /* Styling de todo el header*/
+#pgr-bar {
+  width: 1%;
+  height: 0.375rem;
+  position: fixed;
+  top: 0%;
+  z-index: 101;
+}
+
 #header {
   background: #fff;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.29);
