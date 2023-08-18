@@ -63,7 +63,7 @@ Es por el simple << disfrute del developer >>.
 * (08/08/2023 14:09) Se añade nueva función a la barra del menú en Desktop y App. Ahora te acompaña en todo tu recorrido por la web.
 * (10/07/2023 13:56) Correjida sintaxis de HTML del footer.
 
-### Correcciones según feedback
+## Correcciones según feedback
 
 #### Apartado Visual
 
@@ -77,3 +77,8 @@ Es por el simple << disfrute del developer >>.
 * Se modifica sintaxis del header: se añade etiqueta de cabecera al título.
 * Se modifica sintaxis de la foto de fondo: se quitan las etiquetas de _figure_.
 * Se modifica sintaxis del form: ahora los elementos de contacto son _div_ en vez de elementos _li_.
+
+#### JavaScript
+
+* Se deshecha la función ***cambiarImagen()***. La imagen ha sido sustituida por un div que cambia mediante _@media queries_.
+* Se modifica sintaxis de evento del menú desplegable: se deshecha el _onclick_ del archivo **HTML** y en su lugar se utiliza una función ***.addEventListener()*** en **JavaScript** aplicada a la _img_ del menú.
