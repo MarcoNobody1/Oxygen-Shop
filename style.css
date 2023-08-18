@@ -28,6 +28,9 @@ body {
 }
 
 /*Styling del logo*/
+#header__logo {
+  text-decoration: none;
+}
 #header__logo h1 {
   color: #08a6e4;
   font-family: "Raleway", sans-serif;
@@ -38,7 +41,6 @@ body {
   padding-top: 1.063rem;
   width: 85%;
   margin-left: 5%;
-  text-decoration: none;
 }
 
 /*Styling del nav*/
@@ -771,6 +773,7 @@ body {
     display: inline-block;
     width: 50%;
     margin-left: 8.5rem;
+    text-decoration: none !important;
   }
   .header__nav {
     position: relative;
