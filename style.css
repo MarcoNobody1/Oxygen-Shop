@@ -28,7 +28,7 @@ body {
 }
 
 /*Styling del logo*/
-#header__logo {
+#header__logo h1 {
   color: #08a6e4;
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
@@ -62,7 +62,7 @@ body {
   font-size: 0.688rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 3.28px;
+  letter-spacing: 0.205rem;
   text-transform: uppercase;
   padding-bottom: 0.875rem;
   display: block;
@@ -80,8 +80,8 @@ body {
   position: relative;
   cursor: pointer;
   margin-bottom: 0.188rem;
-  width: 20px;
-  height: 12px;
+  width: 1.25rem;
+  height: 0.75rem;
 }
 
 /*styling pt1*/
@@ -95,7 +95,7 @@ body {
   font-weight: 300;
   margin: 0.81rem auto 1.56rem;
 }
-#pt1 figure {
+#pt1 #figure {
   height: 16.69rem;
   overflow: hidden;
   position: relative;
@@ -106,8 +106,8 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 779px;
-  height: 267px;
+  width: 48.688rem;
+  height: 16.688rem;
 }
 
 /*Styling de la intro de pt1*/
@@ -170,6 +170,8 @@ body {
   font-weight: 400;
   margin-top: 1.188rem;
   margin-bottom: 1.563rem;
+  width: 8.125rem;
+  display: inline-block;
 }
 
 #fig1,
@@ -199,7 +201,7 @@ body {
 #pt2 {
   text-align: center;
   background: #f7f7f7;
-  padding: 40px 30px;
+  padding: 2.5rem 1.875rem;
   /*Styling general para las celdas 1 y 2*/
 }
 #pt2 #pt2__c1,
@@ -211,8 +213,11 @@ body {
   padding: 2.31rem 1.375rem 1.875rem;
   position: relative;
   z-index: 0;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid #e8e9ed;
+}
+#pt2 .c1__imgs {
+  position: relative;
 }
 #pt2 h2 {
   font-family: "Raleway";
@@ -221,6 +226,7 @@ body {
   text-align: left;
   margin-top: 1.685rem;
   padding-bottom: 2.625rem;
+  max-width: 15.625rem;
 }
 
 .t1,
@@ -249,9 +255,24 @@ body {
   z-index: 2;
 }
 
+#topimg1 {
+  width: 193px;
+  height: 110px;
+}
+
+#topimg2 {
+  width: 175px;
+  height: 135px;
+}
+
 .img4 {
-  z-index: 1;
-  transform: translateX(-85%) translateY(-30%);
+  width: 5.633rem;
+  height: 5.633rem;
+  background: #fb3b64;
+  border-radius: 2.563rem;
+  display: inline-block;
+  transform: rotate(-45deg) translateX(-100%) translateY(-60%);
+  transform-origin: 0 0;
 }
 
 .img5 {
@@ -302,6 +323,10 @@ body {
   margin-bottom: 0.875rem;
 }
 
+#pt3__pricing {
+  display: inline-block;
+}
+
 /*pricing nº1*/
 .pr1 {
   position: relative;
@@ -313,13 +338,14 @@ body {
   transition: transform 300ms ease-out;
   pointer-events: auto;
   z-index: 1;
+  margin: 0.625rem;
 }
 .pr1 :hover {
   box-shadow: 5px 10px 27px 0px rgba(251, 59, 100, 0.29);
 }
 .pr1 button {
   position: relative;
-  border-radius: 23px;
+  border-radius: 1.438rem;
   background: #eb476e;
   color: #fff;
   font-family: "Open Sans";
@@ -335,7 +361,7 @@ body {
 #pr__red {
   width: 100%;
   height: 15.688rem;
-  border-radius: 18px;
+  border-radius: 1.125rem;
   border: 1px solid #fb3b64;
   background: #fff;
 }
@@ -353,13 +379,14 @@ body {
   margin-bottom: 2.688rem;
   transition: transform 300ms ease-out;
   pointer-events: auto;
+  margin: 0.625rem;
 }
 .pr2 :hover {
   box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.29);
 }
 .pr2 button {
   position: relative;
-  border-radius: 23px;
+  border-radius: 1.438rem;
   background: #07ace6;
   color: #fff;
   font-family: "Open Sans";
@@ -375,7 +402,7 @@ body {
 #pr__blue {
   width: 100%;
   height: 15.688rem;
-  border-radius: 18px;
+  border-radius: 1.125rem;
   border: 1px solid #07ace6;
   background: #fff;
 }
@@ -390,13 +417,14 @@ body {
   margin-bottom: 2.688rem;
   transition: transform 300ms ease-out;
   pointer-events: auto;
+  margin: 0.625rem;
 }
 .pr3 :hover {
   box-shadow: 5px 10px 27px 0px rgba(85, 223, 180, 0.29);
 }
 .pr3 button {
   position: relative;
-  border-radius: 23px;
+  border-radius: 1.438rem;
   background: #55dfb4;
   color: #fff;
   font-family: "Open Sans";
@@ -412,7 +440,7 @@ body {
 #pr__green {
   width: 100%;
   height: 15.688rem;
-  border-radius: 18px;
+  border-radius: 1.125rem;
   border: 1px solid #55dfb4;
   background: #fff;
 }
@@ -510,13 +538,9 @@ body {
 #contact__qts {
   position: relative;
   text-align: left;
+  margin-bottom: 3.313rem;
 }
-#contact__qts ul {
-  list-style: none;
-  text-align: left;
-  margin-bottom: 3.5rem;
-}
-#contact__qts li {
+#contact__qts div {
   position: relative;
   margin-bottom: 0.625rem;
   cursor: pointer;
@@ -578,7 +602,7 @@ body {
   margin-right: 0.625rem;
   display: inline-block;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #95989a;
 }
 
@@ -606,7 +630,7 @@ body {
 .f-btn {
   position: relative;
   left: 2.594rem;
-  border-radius: 35px;
+  border-radius: 2.188rem;
   background: #08a6e4;
   color: #fff;
   font-family: "Open Sans";
@@ -646,7 +670,7 @@ body {
 }
 #footer__media a {
   vertical-align: middle;
-  margin: 10px;
+  margin: 0.625rem;
   position: relative;
   margin-top: 2.063rem;
 }
@@ -714,7 +738,7 @@ body {
   .pr3 {
     width: 15rem !important;
     height: 10rem !important;
-    margin-bottom: 27.969rem;
+    margin: 0 0 27.969rem 0;
   }
   #pt3__pricing {
     height: 580px;
@@ -740,7 +764,7 @@ body {
   #header__logo {
     color: #08a6e4;
     font-family: "Raleway", sans-serif;
-    padding-top: 17px;
+    padding-top: 0rem;
     font-size: 2rem;
     font-style: normal;
     font-weight: 300;
@@ -779,7 +803,7 @@ body {
     transition: border-bottom 150ms ease-out;
   }
   .header__nav h6:hover {
-    border-bottom: 4px solid #08a6e4;
+    border-bottom: 0.25rem solid #08a6e4;
   }
   .header__nav a {
     text-decoration: none;
@@ -790,7 +814,7 @@ body {
     height: 85.875rem;
     margin-top: 8.125rem;
   }
-  #pt1 figure {
+  #pt1 #figure {
     height: 37.125rem;
     position: relative;
   }
@@ -841,7 +865,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: #f7f7f7;
-    padding: 0 30px;
+    padding: 0 1.875rem;
     height: 87.188rem;
     justify-content: center;
     gap: 2.313rem;
@@ -886,14 +910,22 @@ body {
   #pt2 .c1__imgs {
     height: 100%;
     width: 100%;
+    position: relative;
+    text-align: center;
   }
   #pt2 #topimg1 {
     width: 386.44px;
     height: 219px;
     transform: translateX(0%) translateY(50%);
   }
-  #pt2 #backimg1 {
-    transform: translateX(-80%) translateY(20%);
+  #pt2 .img4 {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    transform: rotate(-45deg) translateX(-145%) translateY(-20%);
+    transform-origin: 0 0;
+    background: #fb3b64;
+    border-radius: 2.563rem;
   }
   #pt2 #pt2__c2 {
     width: 69%;
@@ -991,7 +1023,7 @@ body {
     justify-content: center;
     width: 440px;
     height: 370px;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     border: 1px solid #e8e9ed;
     background: #55dfb4;
   }
@@ -1023,7 +1055,7 @@ body {
   .pr3 {
     width: 23.25rem;
     height: 30.313rem;
-    margin-bottom: 7.969rem;
+    margin: 0 0 7.969rem 0;
   }
   #pr__red,
   #pr__blue,
@@ -1066,14 +1098,13 @@ body {
   .title2 {
     margin-bottom: 2.5rem;
   }
-  form ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-  }
   #contact__form {
     justify-content: end;
     align-content: center;
+  }
+  #contact__qts {
+    display: flex;
+    justify-content: space-between;
   }
   #contact__inputs {
     width: 27.5rem;
@@ -1117,7 +1148,7 @@ body {
     position: relative;
     bottom: 3.688rem;
     left: 21.875rem;
-    border-radius: 35px;
+    border-radius: 2.188rem;
     background: #08a6e4;
     color: #fff;
     font-family: "Open Sans";
@@ -1146,7 +1177,7 @@ body {
   }
   #footer__media a {
     vertical-align: middle;
-    margin: 10px;
+    margin: 0.625rem;
     position: relative;
     margin-top: 2.063rem;
   }

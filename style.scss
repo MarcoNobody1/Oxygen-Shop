@@ -48,14 +48,14 @@ $ultrabold: 800;
 @mixin cuadro($color: #fb3b64) {
    width: 100%;
    height: 15.688rem;
-   border-radius: 18px;
+   border-radius: 1.125rem;
    border: 1px solid $color;
    background: #fff;
 }
 
 @mixin boton($color: #eb476e) {
    position: relative;
-   border-radius: 23px;
+   border-radius: 1.438rem;
    background: $color;
    color: #fff;
    font-family: "Open Sans";
@@ -96,6 +96,8 @@ $ultrabold: 800;
 /*Styling del logo*/
 
 #header__logo {
+
+   h1{
    color: #08a6e4;
    font-family: "Raleway", sans-serif;
    font-size: 2rem;
@@ -106,6 +108,7 @@ $ultrabold: 800;
    width: 85%;
    margin-left: 5%;
    text-decoration: none;
+}
 }
 
 /*Styling del nav*/
@@ -130,7 +133,7 @@ $ultrabold: 800;
       font-size: 0.688rem;
       font-style: normal;
       font-weight: $bold;
-      letter-spacing: 3.28px;
+      letter-spacing: 0.205rem;
       text-transform: uppercase;
       padding-bottom: 0.875rem;
       display: block;
@@ -151,8 +154,8 @@ $ultrabold: 800;
    position: relative;
    cursor: pointer;
    margin-bottom: 0.188rem;
-   width: 20px;
-   height: 12px;
+   width: 1.25rem;
+   height: 0.75rem;
 }
 
 /*styling pt1*/
@@ -167,7 +170,7 @@ $ultrabold: 800;
       margin: 0.81rem auto 1.56rem;
    }
 
-   figure {
+   #figure {
       height: 16.69rem;
       overflow: hidden;
       position: relative;
@@ -180,8 +183,8 @@ $ultrabold: 800;
    position: absolute;
    left: 50%;
    transform: translateX(-50%);
-   width: 779px;
-   height: 267px;
+   width: 48.688rem;
+   height: 16.688rem;
 }
 
 /*Styling de la intro de pt1*/
@@ -250,6 +253,8 @@ $ultrabold: 800;
       font-weight: $normal;
       margin-top: 1.188rem;
       margin-bottom: 1.563rem;
+      width: 8.125rem;
+      display: inline-block;
    }
 }
 
@@ -281,7 +286,7 @@ $ultrabold: 800;
 #pt2 {
    text-align: center;
    background: #f7f7f7;
-   padding: 40px 30px;
+   padding: 2.5rem 1.875rem;
 
    /*Styling general para las celdas 1 y 2*/
 
@@ -294,8 +299,12 @@ $ultrabold: 800;
       padding: 2.31rem 1.375rem 1.875rem;
       position: relative;
       z-index: 0;
-      border-radius: 5px;
+      border-radius: 0.313rem;
       border: 1px solid #e8e9ed;
+   }
+
+   .c1__imgs {
+      position: relative;
    }
 
    h2 {
@@ -305,6 +314,7 @@ $ultrabold: 800;
       text-align: left;
       margin-top: 1.685rem;
       padding-bottom: 2.625rem;
+      max-width: 15.625rem;
    }
 }
 
@@ -335,9 +345,24 @@ $ultrabold: 800;
    z-index: 2;
 }
 
+#topimg1 {
+   width: 193px;
+   height: 110px;
+}
+
+#topimg2 {
+   width: 175px;
+   height: 135px;
+}
+
 .img4 {
-   z-index: 1;
-   transform: translateX(-85%) translateY(-30%);
+   width: 5.633rem;
+   height: 5.633rem;
+   background: #fb3b64;
+   border-radius: 2.563rem;
+   display: inline-block;
+   transform: rotate(-45deg) translateX(-100%) translateY(-60%);
+   transform-origin: 0 0;
 }
 
 .img5 {
@@ -394,11 +419,16 @@ $ultrabold: 800;
    }
 }
 
+#pt3__pricing {
+   display: inline-block;
+}
+
 /*pricing nº1*/
 
 .pr1 {
    @include cuadroext;
    z-index: 1;
+   margin: 0.625rem;
 
    button {
       @include boton;
@@ -417,6 +447,7 @@ $ultrabold: 800;
 
 .pr2 {
    @include cuadroext($color: rgba(7, 172, 230, 0.29));
+   margin: 0.625rem;
 
    button {
       @include boton($color: #07ace6);
@@ -431,6 +462,7 @@ $ultrabold: 800;
 
 .pr3 {
    @include cuadroext($color: rgba(85, 223, 180, 0.29));
+   margin: 0.625rem;
 
    button {
       @include boton($color: #55dfb4);
@@ -528,13 +560,9 @@ $ultrabold: 800;
 #contact__qts {
    position: relative;
    text-align: left;
-   ul {
-      list-style: none;
-      text-align: left;
-      margin-bottom: 3.5rem;
-   }
+   margin-bottom: 3.313rem;
 
-   li {
+   div {
       position: relative;
       margin-bottom: 0.625rem;
       cursor: pointer;
@@ -601,7 +629,7 @@ $ultrabold: 800;
    margin-right: 0.625rem;
    display: inline-block;
    cursor: pointer;
-   border-radius: 4px;
+   border-radius: 0.25rem;
    border: 1px solid #95989a;
 }
 
@@ -630,7 +658,7 @@ $ultrabold: 800;
 .f-btn {
    position: relative;
    left: 2.594rem;
-   border-radius: 35px;
+   border-radius: 2.188rem;
    background: #08a6e4;
    color: #fff;
    font-family: "Open Sans";
@@ -671,7 +699,7 @@ $ultrabold: 800;
 
    a {
       vertical-align: middle;
-      margin: 10px;
+      margin: 0.625rem;
       position: relative;
       margin-top: 2.063rem;
    }
@@ -731,7 +759,7 @@ $ultrabold: 800;
    .pr3 {
       width: 15rem !important;
       height: 10rem !important;
-      margin-bottom: 27.969rem;
+      margin: 0 0 27.969rem 0;
    }
 
    #pt3__pricing {
@@ -763,7 +791,7 @@ $ultrabold: 800;
    #header__logo {
       color: #08a6e4;
       font-family: "Raleway", sans-serif;
-      padding-top: 17px;
+      padding-top: 0rem;
       font-size: 2rem;
       font-style: normal;
       font-weight: $light;
@@ -804,7 +832,7 @@ $ultrabold: 800;
       }
 
       h6:hover {
-         border-bottom: 4px solid #08a6e4;
+         border-bottom: 0.25rem solid #08a6e4;
       }
 
       a {
@@ -819,7 +847,7 @@ $ultrabold: 800;
       height: 85.875rem;
       margin-top: 8.125rem;
 
-      figure {
+      #figure {
          height: 37.125rem;
          position: relative;
       }
@@ -883,7 +911,7 @@ $ultrabold: 800;
       flex-direction: column;
       align-items: center;
       background: #f7f7f7;
-      padding: 0 30px;
+      padding: 0 1.875rem;
       height: 87.188rem;
       justify-content: center;
       gap: 2.313rem;
@@ -933,6 +961,8 @@ $ultrabold: 800;
       .c1__imgs {
          height: 100%;
          width: 100%;
+         position: relative;
+         text-align: center;
       }
 
       #topimg1 {
@@ -941,8 +971,14 @@ $ultrabold: 800;
          transform: translateX(-0%) translateY(50%);
       }
 
-      #backimg1 {
-         transform: translateX(-80%) translateY(20%);
+      .img4 {
+         width: 180px;
+         height: 180px;
+         position: absolute;
+         transform: rotate(-45deg) translateX(-145%) translateY(-20%);
+         transform-origin: 0 0;
+         background: #fb3b64;
+         border-radius: 2.563rem;
       }
 
       /*styling celda 2 (web)*/
@@ -1058,7 +1094,7 @@ $ultrabold: 800;
          justify-content: center;
          width: 440px;
          height: 370px;
-         border-radius: 5px;
+         border-radius: 0.313rem;
          border: 1px solid #e8e9ed;
          background: #55dfb4;
 
@@ -1097,7 +1133,7 @@ $ultrabold: 800;
    .pr3 {
       width: 23.25rem;
       height: 30.313rem;
-      margin-bottom: 7.969rem;
+      margin: 0 0 7.969rem 0;
    }
 
    #pr__red,
@@ -1152,15 +1188,14 @@ $ultrabold: 800;
       margin-bottom: 2.5rem;
    }
 
-   form ul {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
-   }
-
    #contact__form {
       justify-content: end;
       align-content: center;
+   }
+
+   #contact__qts {
+      display: flex;
+      justify-content: space-between;
    }
 
    #contact__inputs {
@@ -1211,7 +1246,7 @@ $ultrabold: 800;
       position: relative;
       bottom: 3.688rem;
       left: 21.875rem;
-      border-radius: 35px;
+      border-radius: 2.188rem;
       background: #08a6e4;
       color: #fff;
       font-family: "Open Sans";
@@ -1243,7 +1278,7 @@ $ultrabold: 800;
 
       a {
          vertical-align: middle;
-         margin: 10px;
+         margin: 0.625rem;
          position: relative;
          margin-top: 2.063rem;
       }

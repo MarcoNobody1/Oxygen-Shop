@@ -16,9 +16,10 @@
 
 <body>
     <header id="header">
-        <a id="header__logo" href="index.html">OXYGENShop</a>
-        <img onclick="desplegarMenu()" src="./resources/svg/menu.svg" id="menu" class="header__menu ocult"
-            alt="icono de menu">
+        <a id="header__logo" href="index.html">
+            <h1>OXYGENShop</h1>
+        </a>
+        <img src="./resources/svg/menu.svg" id="menu" class="header__menu ocult" alt="icono de menu">
         <nav class="hidden header__nav" id="nav">
             <a href="#lil-title">
                 <h6>Why us</h6>
@@ -41,36 +42,36 @@
                 increase your sales</p>
             <button type="submit" class="shop-btn">Open your shop</button>
         </section>
-        <figure>
+        <div id="figure">
             <img class="imgbg" src="./resources/img/background.png" alt="imagen de fondo">
-        </figure>
+        </div>
         <h2 id="lil-title">The most popular sales platform in country</h2>
         <section id="pt1__figs">
-            <article id="fig1">
+            <div id="fig1">
                 <img src="./resources/svg/fig-cir1.svg" alt="circulo rojo">
                 <img class="moveimg img1" src="./resources/svg/fig1.svg" alt="icono de persona">
                 <h3>100000+</h3>
                 <h4>daily entries</h4>
-            </article>
-            <article id="fig2">
+            </div>
+            <div id="fig2">
                 <img src="./resources/svg/fig-cir2.svg" alt="circulo azul">
                 <img class="moveimg img2" src="./resources/svg/fig2.svg" alt="icono de ojo">
                 <h3>2000000+</h3>
                 <h4>seen products every day</h4>
-            </article>
-            <article id="fig3">
+            </div>
+            <div id="fig3">
                 <img src="./resources/svg/fig-cir3.svg" alt="circulo verde">
                 <img class="moveimg img3" src="./resources/svg/fig3.svg" alt="icono de galería">
                 <h3>10000+</h3>
                 <h4>added posts daily</h4>
-            </article>
+            </div>
         </section>
     </section>
     <section id="pt2">
-        <article id="pt2__c1">
+        <div id="pt2__c1">
             <div class="c1__imgs">
                 <img class="topimg" id="topimg1" src="./resources/img/macbook.png" alt="mackbook">
-                <img class="moveimg img4" id="backimg1" src="./resources/svg/svg-c1.svg" alt="elipse roja">
+                <div class="moveimg img4" id="backimg1"></div>
             </div>
             <div class="c1__text">
                 <h2>Be always first</h2>
@@ -82,8 +83,8 @@
                     <path d="M0 2H327.64" stroke="#FB3B64" stroke-width="4" />
                 </svg>
             </div>
-        </article>
-        <article id="pt2__c2">
+        </div>
+        <div id="pt2__c2">
             <div class="c2__imgs">
                 <img class="topimg" id="topimg2" src="./resources/img/iPhone.png" alt="iPhone">
                 <img class="moveimg img5" id="backimg2" src="./resources/svg/svg-c2.svg" alt="elipse azul">
@@ -99,8 +100,8 @@
                     <path d="M0 2H327.64" stroke="#08A6E4" stroke-width="4" />
                 </svg>
             </div>
-        </article>
-        <article id="pt2__c3">
+        </div>
+        <div id="pt2__c3">
             <div id="c3__text">
                 <h2>Increase recognition your brand!</h2>
                 <p class="t2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -114,12 +115,12 @@
             <div id="c3__img">
                 <img class="moveimg img6" src="./resources/img/trumpet.png" alt="trompeta de mano">
             </div>
-        </article>
+        </div>
     </section>
     <section id="pt3">
         <h2>Pricing</h2>
-        <article id="pt3__pricing">
-            <article class="pr1">
+        <div id="pt3__pricing">
+            <div class="pr1">
                 <div id="pr__red">
                     <div class="pr__title">
                         <h3>Basic</h3>
@@ -146,8 +147,8 @@
                     </div>
                 </div>
                 <button type="submit" class="pr-btn">Begin</button>
-            </article>
-            <article class="pr2">
+            </div>
+            <div class="pr2">
                 <div id="pr__blue">
                     <div class="pr__title">
                         <h3>Professional</h3>
@@ -175,8 +176,8 @@
                     </div>
                 </div>
                 <button type="submit" class="pr-btn">Begin</button>
-            </article>
-            <article class="pr3">
+            </div>
+            <div class="pr3">
                 <div id="pr__green">
                     <div class="pr__title">
                         <h3>Premium</h3>
@@ -204,23 +205,22 @@
                     </div>
                 </div>
                 <button type="submit" class="pr-btn">Begin</button>
-            </article>
-        </article>
-        <article id="pt3__contact">
-            <div id="form__flex">
+            </div>
+        </div>
+        <div id="pt3__contact">
+            <form id="form__flex">
                 <div id="contact__form">
                     <p id="formu">Any questions?</p>
                     <p class="title2">Leave your email address or call us!</p>
                     <div id="contact__qts">
-                        <form>
-                            <ul>
-                                <li><img src="./resources/svg/mail.svg" alt="icono de carta">
-                                    <p class="inf">info@bestshop.xyz</p>
-                                </li>
-                                <li><img src="./resources/svg/phone.svg" alt="icono de telefono">
-                                    <p class="inf">123 456 789</p>
-                                </li>
-                            </ul>
+                        <div>
+                            <img src="./resources/svg/mail.svg" alt="icono de carta">
+                            <p class="inf">info@bestshop.xyz</p>
+                        </div>
+                        <div>
+                            <img src="./resources/svg/phone.svg" alt="icono de telefono">
+                            <p class="inf">123 456 789</p>
+                        </div>
                     </div>
                 </div>
                 <div id="contact__inputs">
@@ -228,7 +228,7 @@
                     <input type="text" name="name" id="name" required>
                     <label for="email" class="input__title">EMAIL</label>
                     <input type="email" name="email" id="email" required>
-                    <input aria-label="chekbox" type="checkbox" name="check" class="check" required>
+                    <input aria-label="chekbox" type="checkbox" name="check" id="check" class="check" required>
                     <label for="check" class="checkbox__text">I hereby give consent for my personal data included in my
                         application to be processed for the purposes of the recruitment process under the European
                         Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons
@@ -237,10 +237,9 @@
                         data,
                         and repealing Directive 95/46/EC (Data Protection Directive)</label>
                 </div>
-            </div>
-            <button type="submit" class="f-btn">Send</button>
             </form>
-        </article>
+            <button type="submit" form="form__flex" class="f-btn">Send</button>
+        </div>
     </section>
     <footer id="footer">
         <section id="footer__text">

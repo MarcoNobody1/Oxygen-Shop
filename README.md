@@ -62,3 +62,18 @@ Es por el simple << disfrute del developer >>.
 
 * (08/08/2023 14:09) Se añade nueva función a la barra del menú en Desktop y App. Ahora te acompaña en todo tu recorrido por la web.
 * (10/07/2023 13:56) Correjida sintaxis de HTML del footer.
+
+### Correcciones según feedback
+
+#### Apartado Visual
+
+* Se corrigen anchos de elementos HTML para conseguir un mayor parecido al diseño original de Figma.
+* Se añaden márgenes al apartado de pricing para corregir diseño en ciertos dispositivos (tablet, pequeño laptop, etc..).
+
+#### HTML
+
+* Se comprueban, se corrigen y se cierran todas las etiquetas que quedaban sin cerrar.
+* Se corrigen errores de sintaxis en el código **HTML**.
+* Se modifica sintaxis del header: se añade etiqueta de cabecera al título.
+* Se modifica sintaxis de la foto de fondo: se quitan las etiquetas de _figure_.
+* Se modifica sintaxis del form: ahora los elementos de contacto son _div_ en vez de elementos _li_.
