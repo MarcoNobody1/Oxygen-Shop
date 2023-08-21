@@ -1154,6 +1154,8 @@ body {
   }
   /*styling formulario (web)*/
   #pt3__contact {
+    display: flex;
+    justify-content: flex-end;
     width: 56rem;
     height: 27.188rem;
     margin: 0%;
@@ -1162,6 +1164,7 @@ body {
   }
   #form__flex {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
   #formu {
@@ -1217,10 +1220,8 @@ body {
     margin-bottom: 0;
   }
   .f-btn {
-    display: inline-block;
     position: relative;
-    bottom: 3.688rem;
-    left: 21.875rem;
+    bottom: 10rem;
     border-radius: 2.188rem;
     background: #08a6e4;
     color: #fff;
@@ -1254,6 +1255,10 @@ body {
     position: relative;
     margin-top: 2.063rem;
   }
+}
+/*Clase para formulario erroneo*/
+.nope {
+  border: 1px solid red !important;
 }
 
 /*# sourceMappingURL=style.css.map */

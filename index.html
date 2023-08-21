@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap"
         rel="stylesheet">
+        <link rel="icon" type="image/png" href="resources/img/OS.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -209,7 +210,7 @@
             </div>
         </div>
         <div id="pt3__contact">
-            <form id="form__flex">
+            
                 <div id="contact__form">
                     <p id="formu">Any questions?</p>
                     <p class="title2">Leave your email address or call us!</p>
@@ -224,11 +225,12 @@
                         </div>
                     </div>
                 </div>
+            <form id="form__flex">
                 <div id="contact__inputs">
                     <label for="name" class="input__title">NAME</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" placeholder="Enter a name between 2 - 100 letters" required>
                     <label for="email" class="input__title">EMAIL</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter a valid e-mail" required>
                     <input aria-label="chekbox" type="checkbox" name="check" id="check" class="check" required>
                     <label for="check" class="checkbox__text">I hereby give consent for my personal data included in my
                         application to be processed for the purposes of the recruitment process under the European
@@ -239,7 +241,7 @@
                         and repealing Directive 95/46/EC (Data Protection Directive)</label>
                 </div>
             </form>
-            <button type="submit" form="form__flex" class="f-btn">Send</button>
+            <button class="f-btn">Send</button>
         </div>
     </section>
     <footer id="footer">

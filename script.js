@@ -1,8 +1,26 @@
 // Declaracion de variables
+//Evento 1:
 const nav = document.getElementById("nav");
 const menu = document.getElementById("menu");
 
-// Evento para expandir o contraer el nav y cambiar la img
+//Evento 2:
+const bar = document.getElementById("pgr-bar");
+const scrollY = window.scrollY;
+const docHeigth = document.documentElement.scrollHeight;
+const winHeigth = window.innerHeight;
+const pt2 = document.getElementById("pt2__c2");
+const prBlue = document.getElementById("pr__blue");
+const cbox = document.getElementById("check");
+const pt3 = document.getElementById("pt3");
+
+//Evento 3:
+const button = document.createElement("button");
+const header = document.getElementById("header");
+
+//Evento 4:
+const openBtn = document.querySelector(".shop-btn");
+
+// Evento 1: para expandir o contraer el nav y cambiar la img de menu
 
 function desplegarMenu() {
   nav.classList.toggle("hidden");
@@ -15,40 +33,30 @@ function desplegarMenu() {
 
 menu.addEventListener("click", desplegarMenu);
 
-// Evento para la barra de progreso
+// Evento 2: para la barra de progreso
 
 window.addEventListener("scroll", function barraProgreso() {
-  const bar = document.getElementById("pgr-bar");
-  const scrollY = window.scrollY;
-  const docHeigth = document.documentElement.scrollHeight;
-  const winHeigth = window.innerHeight;
-  const pt2 = document.getElementById("pt2__c2");
-  const pt3 = document.getElementById("pr__blue");
-  const form = this.document.getElementById("check");
   const pt2pos = pt2.getBoundingClientRect().top;
-  const pt3pos = pt3.getBoundingClientRect().top;
-  const formpos = form.getBoundingClientRect().top;
+  const prBluepos = prBlue.getBoundingClientRect().top;
+  const cboxpos = cbox.getBoundingClientRect().top;
 
-  let actualWidth = (scrollY / (docHeigth - winHeigth)) * 100;
+  let actualWidth = (this.scrollY / (docHeigth - winHeigth)) * 100;
 
   bar.style.width = actualWidth + "%";
 
   if (pt2pos >= winHeigth) {
     bar.style.backgroundColor = "#08a6e4";
-  } else if (pt3pos >= winHeigth) {
+  } else if (prBluepos >= winHeigth) {
     bar.style.backgroundColor = "#55DFB4";
-  } else if (formpos >= winHeigth) {
+  } else if (cboxpos >= winHeigth) {
     bar.style.backgroundColor = "#FB3B64";
   } else {
     bar.style.backgroundColor = "#08a6e4";
   }
 });
 
-//Creación y evento del botón "Return to the top"
+//Evento 3: Creación y evento del botón "Return to the top"
 
-const pt3 = document.getElementById("pt3");
-const button = document.createElement("button");
-const header = document.getElementById("header");
 button.classList.add("return");
 button.innerText = "Return to the top!";
 
@@ -62,3 +70,15 @@ button.addEventListener("click", function () {
 });
 
 pt3.appendChild(button);
+
+//Evento 4: para el botón de 'Open your shop'
+
+openBtn.addEventListener("click", function () {
+  setTimeout(() => {
+    window.scrollTo({
+      top: pt3.offsetTop,
+      behavior: "smooth",
+    });
+  }, 300);
+});
+

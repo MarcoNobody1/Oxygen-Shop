@@ -1243,6 +1243,8 @@ $ultrabold: 800;
    /*styling formulario (web)*/
 
    #pt3__contact {
+      display: flex;
+      justify-content: flex-end;
       width: 56rem;
       height: 27.188rem;
       margin: 0%;
@@ -1252,6 +1254,7 @@ $ultrabold: 800;
 
    #form__flex {
       display: flex;
+      flex-direction: row-reverse;
       justify-content: space-between;
    }
 
@@ -1318,10 +1321,8 @@ $ultrabold: 800;
    }
 
    .f-btn {
-      display: inline-block;
       position: relative;
-      bottom: 3.688rem;
-      left: 21.875rem;
+      bottom:10rem;
       border-radius: 2.188rem;
       background: #08a6e4;
       color: #fff;
@@ -1359,4 +1360,10 @@ $ultrabold: 800;
          margin-top: 2.063rem;
       }
    }
+}
+
+/*Clase para formulario erroneo*/
+
+.nope{
+   border: 1px solid red !important;
 }
