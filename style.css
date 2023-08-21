@@ -734,6 +734,38 @@ body {
   margin-left: 1.063rem;
 }
 
+/*Clase para botón creado en JavaScript*/
+.return {
+  display: block;
+  position: relative;
+  left: 0px;
+  bottom: 45px;
+  z-index: 300;
+  margin-left: 5%;
+  border-radius: 2.188rem;
+  background-image: url("resources/img/boton-app.gif");
+  background-size: cover;
+  opacity: 80%;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 0;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border: none;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.return:hover {
+  width: 50px;
+  height: 50px;
+  transform: scale(1.2);
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+  font-size: 0px;
+}
+
 /*Clase hidden condicional al ancho de pantalla */
 @media only screen and (max-width: 1000px) {
   .hidden {
@@ -758,6 +790,36 @@ body {
 @media only screen and (min-width: 1000px) {
   .ocult {
     display: none;
+  }
+  /*Clase para botón creado en JavaScript*/
+  .return {
+    display: block;
+    position: relative;
+    left: -250px;
+    bottom: 45px;
+    z-index: 300;
+    border-radius: 2.188rem;
+    background-image: url("resources/img/boton-0.png");
+    opacity: 70%;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 0.813rem;
+    font-weight: 700;
+    width: 14.125rem;
+    height: 3.563rem;
+    border: none;
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .return:hover {
+    width: 14.125rem;
+    height: 3.563rem;
+    transform: scale(1.2);
+    box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.29);
+    background-image: url("resources/img/boton.gif");
+    background-size: cover;
+    font-size: 0px;
   }
   /*Styling del header (web)*/
   #header {
