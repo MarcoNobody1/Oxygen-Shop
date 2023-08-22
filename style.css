@@ -734,7 +734,7 @@ body {
   margin-left: 1.063rem;
 }
 
-/*Clase para botón creado en JavaScript*/
+/*Clase para botón return creado en JavaScript*/
 .return {
   display: block;
   position: relative;
@@ -791,12 +791,13 @@ body {
   .ocult {
     display: none;
   }
-  /*Clase para botón creado en JavaScript*/
+  /*Clase para botón return creado en JavaScript (web)*/
   .return {
     display: block;
     position: relative;
     left: -250px;
-    bottom: 45px;
+    bottom: 115px;
+    margin-left: 0;
     z-index: 300;
     border-radius: 2.188rem;
     background-image: url("resources/img/boton-0.png");
@@ -820,6 +821,7 @@ body {
     background-image: url("resources/img/boton.gif");
     background-size: cover;
     font-size: 0px;
+    border: 2px solid black;
   }
   /*Styling del header (web)*/
   #header {
@@ -1255,10 +1257,6 @@ body {
     position: relative;
     margin-top: 2.063rem;
   }
-}
-/*Clase para formulario erroneo*/
-.nope {
-  border: 1px solid red !important;
 }
 
 /*# sourceMappingURL=style.css.map */
