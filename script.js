@@ -21,10 +21,12 @@ const header = document.getElementById("header");
 const openBtn = document.querySelector(".shop-btn");
 
 //Evento 5:
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const formBtn = document.querySelector('.f-btn');
-const checkInput = document.getElementById('check');
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const formBtn = document.querySelector(".f-btn");
+const checkInput = document.getElementById("check");
+const emailPattern =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 // Evento 1: para expandir o contraer el nav y cambiar la img de menu
 
@@ -90,65 +92,66 @@ openBtn.addEventListener("click", function () {
 
 //Evento 5 (pt1): para la vaidación del formulario
 
-formBtn.addEventListener('click', function() {
+formBtn.addEventListener("click", function () {
   const name = nameInput.value;
   const email = emailInput.value;
-  const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let check1;
   let check2;
   let check3;
 
-    if (name.length < 2 || name.length > 100) {
-      nameInput.style.border = '1px solid red';
-    } else {
-      nameInput.style.border = 'initial';
-      check1 = true;
-    }
-    if (!emailPattern.test(email)) {
-      emailInput.style.border = '1px solid red';
-    } else {
-      emailInput.style.border = 'initial';
-      check2 = true;
-    }
-    if (!checkInput.checked){
-      checkInput.style.outline = '2px solid red';
-      checkInput.style.border = 'none';
-    } else {
-      checkInput.style.outline = 'initial';
-      check3 = true;
-    }
-  if(check1 && check2 && check3){
+  if (name.length < 2 || name.length > 100) {
+    nameInput.style.border = "1px solid red";
+  } else {
+    nameInput.style.border = "initial";
+    check1 = true;
+  }
+  if (!emailPattern.test(email)) {
+    emailInput.style.border = "1px solid red";
+  } else {
+    emailInput.style.border = "initial";
+    check2 = true;
+  }
+  if (!checkInput.checked) {
+    checkInput.style.outline = "2px solid red";
+    checkInput.style.border = "none";
+  } else {
+    checkInput.style.outline = "initial";
+    check3 = true;
+  }
+
+  if (check1 && check2 && check3) {
     fetchingData(name, email);
-    setTimeout(() =>{
-      nameInput.value='';
-      emailInput.value='';
-      checkInput.checked=false;
-    },2000)
+    setTimeout(() => {
+      nameInput.value = "";
+      emailInput.value = "";
+      checkInput.checked = false;
+    }, 2000);
   }
 
   //Evento 5 (pt2): para mandar los datos del formulario al servidor de testing
-  async function fetchingData(n, e) {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
+
+  async function fetchingData(name_data, email_data) {
+    const url = "https://jsonplaceholder.typicode.com/posts";
     const user = {
-        method: 'POST',
-        body: JSON.stringify({
-            name: n,
-            email: e,
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    }
+      method: "POST",
+      body: JSON.stringify({
+        name: name_data,
+        email: email_data,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    };
     const data = await fetch(url, user)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data)
-        })
-        .then(() => {
-            window.alert('¡Gracias por enviarnos tus datos! En breve recibirás un correo.')
-        })
-        .catch((err) => {
-            console.log(`error ${err}`)
-        })
-}
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .then(() => {
+        window.alert("¡Gracias por enviarnos tus datos! En breve recibirás un correo.");
+      })
+      .catch((err) => {
+        console.log(`error ${err}`);
+      });
+  }
 });
