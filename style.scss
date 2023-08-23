@@ -786,7 +786,7 @@ $ultrabold: 800;
 
 #modal {
    width: 250px;
-   height: 100px;
+   height: 120px;
    display: none;
    flex-direction: column;
    border: 2px black solid;
@@ -824,6 +824,7 @@ $ultrabold: 800;
 #modal-form {
    display: flex;
    flex-direction: row;
+   margin-top: 15px;
    justify-content: space-between;
    padding: 5px 10px 0 10px;
    height: 40px;
@@ -833,7 +834,7 @@ $ultrabold: 800;
 #modal-email {
    position: relative;
    width: 90%;
-   height: 30px;
+   height: 40px;
    border-radius: 45px;
    text-align: left;
 }
@@ -861,7 +862,7 @@ $ultrabold: 800;
    padding: 1px;
    font-weight: $normal;
    width: 100px;
-   height: 30px;
+   height: 50px;
    border: 2px solid black;
 }
 
@@ -1489,10 +1490,12 @@ $ultrabold: 800;
       flex-direction: column;
       padding: 10px 10px 0 10px;
       height: 80px;
+      margin-top: 0;
    }
 
    #modal-email {
       text-align: center;
+      height: 30px;
    }
 
    #modal-email:hover {
@@ -1506,6 +1509,7 @@ $ultrabold: 800;
       padding: 2px;
       font-weight: $normal;
       width: 180px;
+      height: 30px;
       border: 2px solid black;
    }
 
