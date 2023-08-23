@@ -6,20 +6,26 @@
     <title> Oxygen Shop</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap"
         rel="stylesheet">
-        <link rel="icon" type="image/png" href="resources/img/OS.png">
+    <link rel="icon" type="image/png" href="resources/img/OS.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="pgr-bar"></div>
-    <div id="modal">
+    <div id="modal" class="slide-in-blurred-right">
         <div id="modal-imgs">
-            <img src="resources/svg/cross.svg" alt="cross">
+            <img id="modalcross" src="resources/svg/cross.svg" alt="cross">
         </div>
         <form id="modal-form">
             <input placeholder="E-mail: oxygen@shop.xyz" type="email" name="modal-email" id="modal-email">
@@ -219,25 +225,26 @@
             </div>
         </div>
         <div id="pt3__contact">
-            
-                <div id="contact__form">
-                    <p id="formu">Any questions?</p>
-                    <p class="title2">Leave your email address or call us!</p>
-                    <div id="contact__qts">
-                        <div>
-                            <img src="./resources/svg/mail.svg" alt="icono de carta">
-                            <p class="inf">info@bestshop.xyz</p>
-                        </div>
-                        <div>
-                            <img src="./resources/svg/phone.svg" alt="icono de telefono">
-                            <p class="inf">123 456 789</p>
-                        </div>
+
+            <div id="contact__form">
+                <p id="formu">Any questions?</p>
+                <p class="title2">Leave your email address or call us!</p>
+                <div id="contact__qts">
+                    <div>
+                        <img src="./resources/svg/mail.svg" alt="icono de carta">
+                        <p class="inf">info@bestshop.xyz</p>
+                    </div>
+                    <div>
+                        <img src="./resources/svg/phone.svg" alt="icono de telefono">
+                        <p class="inf">123 456 789</p>
                     </div>
                 </div>
+            </div>
             <form id="form__flex">
                 <div id="contact__inputs">
                     <label for="name" class="input__title">NAME</label>
-                    <input type="text" name="name" id="name" placeholder="Enter a name between 2 - 100 letters" required>
+                    <input type="text" name="name" id="name" placeholder="Enter a name between 2 - 100 letters"
+                        required>
                     <label for="email" class="input__title">EMAIL</label>
                     <input type="email" name="email" id="email" placeholder="Enter a valid e-mail" required>
                     <input aria-label="chekbox" type="checkbox" name="check" id="check" class="check" required>
