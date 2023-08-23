@@ -280,3 +280,11 @@ subbtn.addEventListener("click", () => {
       });
   }
 });
+
+//Evento 7: para el selector de moneda
+
+const select = document.getElementById("select");
+
+select.addEventListener("change", () => {
+  select.blur();
+});
