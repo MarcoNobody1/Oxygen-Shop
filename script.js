@@ -159,9 +159,22 @@ formBtn.addEventListener("click", function () {
         console.log(data);
       })
       .then(() => {
-        window.alert(
-          "¡Gracias por enviarnos tus datos! En breve recibirás un correo."
-        );
+        const Alert = Swal.mixin({
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Alert.fire({
+          icon: "success",
+          title: "Success! You will soon receive an email from us.",
+        });
       })
       .catch((err) => {
         console.log(`error ${err}`);
@@ -247,20 +260,20 @@ subbtn.addEventListener("click", () => {
       .then(() => {
         const Toast = Swal.mixin({
           toast: true,
-          position: 'top-end',
+          position: "top",
           showConfirmButton: false,
           timer: 2000,
           timerProgressBar: false,
           didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-          }
-        })
-        
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
         Toast.fire({
-          icon: 'success',
-          title: 'Your subscription has been successfully registered'
-        })
+          icon: "success",
+          title: "Your subscription has been successfully registered",
+        });
       })
       .catch((err) => {
         console.log(`error ${err}`);
