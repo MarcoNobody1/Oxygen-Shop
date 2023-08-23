@@ -1,4 +1,5 @@
 // Declaracion de variables
+
 //Evento 1:
 const nav = document.getElementById("nav");
 const menu = document.getElementById("menu");
@@ -27,6 +28,16 @@ const formBtn = document.querySelector(".f-btn");
 const checkInput = document.getElementById("check");
 const emailPattern =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+//Evento 6
+const modal = document.getElementById("modal");
+const modalcross = document.getElementById("modalcross");
+const subbtn = document.getElementById("modal-btn");
+const modalinput = document.getElementById("modal-email");
+const modalhead = document.getElementById("modal-imgs");
+let backNow = modalhead.style.backgroundImage;
+
+//Eventos y funciones
 
 // Evento 1: para expandir o contraer el nav y cambiar la img de menu
 
@@ -148,7 +159,108 @@ formBtn.addEventListener("click", function () {
         console.log(data);
       })
       .then(() => {
-        window.alert("¡Gracias por enviarnos tus datos! En breve recibirás un correo.");
+        window.alert(
+          "¡Gracias por enviarnos tus datos! En breve recibirás un correo."
+        );
+      })
+      .catch((err) => {
+        console.log(`error ${err}`);
+      });
+  }
+});
+
+//Evento 6: creacion del pop-up /modal
+
+//Abrir el /modal
+
+const openModal = () => {
+  modal.style.display = "flex";
+};
+
+window.addEventListener("scroll", () => {
+  let actualWidth = (this.scrollY / (docHeigth - winHeigth)) * 100;
+
+  if (actualWidth >= 25 && localStorage.getItem("oculto") === null) {
+    openModal();
+  }
+});
+
+if (localStorage.getItem("oculto") === null) {
+  setTimeout(openModal, 5000);
+}
+
+//Cerrar el modal
+
+const closeModal = () => {
+  modal.classList.add("hidemodal");
+  localStorage.setItem("oculto", "true");
+};
+
+modalcross.addEventListener("click", closeModal);
+
+const keyPressed = (e) => {
+  if (e.keyCode === 27 && modal.style.display === "flex") {
+    closeModal();
+  }
+};
+
+const clickout = (e) => {
+  if (!modal.contains(e.target) && modal.style.display === "flex") {
+    closeModal();
+  }
+};
+
+document.addEventListener("keydown", keyPressed);
+document.addEventListener("click", clickout);
+
+//Mandar datos de suscripción
+
+subbtn.addEventListener("click", () => {
+  const subemail = modalinput.value;
+
+  if (!emailPattern.test(subemail)) {
+    modalinput.style.border = "3px solid red";
+    modalhead.style.backgroundImage = "url(resources/img/modal-head-wrong.gif)";
+  } else {
+    modalinput.style.border = "initial";
+    modalhead.style.backgroundImage = "url(resources/img/modal-head-right.gif)";
+    fetchingSub(subemail);
+    setTimeout(closeModal, 2000);
+  }
+
+  async function fetchingSub(email_sub) {
+    const urltest = "https://jsonplaceholder.typicode.com/posts";
+    const usersub = {
+      method: "POST",
+      body: JSON.stringify({
+        email: email_sub,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    };
+    const datasub = await fetch(urltest, usersub)
+      .then((res) => res.json())
+      .then((datasub) => {
+        console.log(datasub);
+      })
+      .then(() => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: false,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'success',
+          title: 'Your subscription has been successfully registered'
+        })
       })
       .catch((err) => {
         console.log(`error ${err}`);
