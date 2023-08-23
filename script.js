@@ -35,7 +35,7 @@ const modalcross = document.getElementById("modalcross");
 const subbtn = document.getElementById("modal-btn");
 const modalinput = document.getElementById("modal-email");
 const modalhead = document.getElementById("modal-imgs");
-let backNow = modalhead.style.backgroundImage;
+const modalform = document.getElementById("modal-form");
 
 //Eventos y funciones
 
@@ -228,56 +228,78 @@ document.addEventListener("click", clickout);
 
 //Mandar datos de suscripción
 
-subbtn.addEventListener("click", () => {
-  const subemail = modalinput.value;
-
-  if (!emailPattern.test(subemail)) {
+function validarEmail(email) {
+  if (!emailPattern.test(email)) {
     modalinput.style.border = "3px solid red";
     modalhead.style.backgroundImage = "url(resources/img/modal-head-wrong.gif)";
+    return false;
   } else {
     modalinput.style.border = "initial";
     modalhead.style.backgroundImage = "url(resources/img/modal-head-right.gif)";
-    fetchingSub(subemail);
+    return true;
+  }
+}
+
+async function enviarDatos(email) {
+  const urltest = "https://jsonplaceholder.typicode.com/posts";
+  const usersub = {
+    method: "POST",
+    body: JSON.stringify({
+      email: email,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  };
+  try {
+    const response = await fetch(urltest, usersub);
+    const datasub = await response.json();
+    console.log(datasub);
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: false,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: "success",
+      title: "Your subscription has been successfully registered",
+    });
+  } catch (err) {
+    console.log(`error ${err}`);
+  }
+}
+
+subbtn.addEventListener("click", () => {
+  const subemail = modalinput.value;
+
+  if (validarEmail(subemail)) {
+    enviarDatos(subemail);
     setTimeout(closeModal, 2000);
   }
+});
 
-  async function fetchingSub(email_sub) {
-    const urltest = "https://jsonplaceholder.typicode.com/posts";
-    const usersub = {
-      method: "POST",
-      body: JSON.stringify({
-        email: email_sub,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    };
-    const datasub = await fetch(urltest, usersub)
-      .then((res) => res.json())
-      .then((datasub) => {
-        console.log(datasub);
-      })
-      .then(() => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top",
-          showConfirmButton: false,
-          timer: 2000,
-          timerProgressBar: false,
-          didOpen: (toast) => {
-            toast.addEventListener("mouseenter", Swal.stopTimer);
-            toast.addEventListener("mouseleave", Swal.resumeTimer);
-          },
-        });
+modalform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const subemail = modalinput.value;
 
-        Toast.fire({
-          icon: "success",
-          title: "Your subscription has been successfully registered",
-        });
-      })
-      .catch((err) => {
-        console.log(`error ${err}`);
-      });
+  if (validarEmail(subemail)) {
+    enviarDatos(subemail);
+    setTimeout(closeModal, 2000);
+  }
+});
+
+modalinput.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    subbtn.click();
   }
 });
 
