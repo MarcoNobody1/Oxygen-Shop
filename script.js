@@ -351,16 +351,19 @@ select.addEventListener("change", () => {
 
   if (select.value === "euro") {
     symbols.forEach((e) => (e.innerHTML = "€")),
-      restartPrice(),
-      fetchCurrency("eur");
+      (select.style.backgroundImage = "url(resources/img/euro.gif)");
+    select.style.color = "transparent";
+    restartPrice(), fetchCurrency("eur");
   } else if (select.value === "dolar") {
     symbols.forEach((e) => (e.innerHTML = "$")),
-      restartPrice(),
-      fetchCurrency("usd");
+      (select.style.backgroundImage = "url(resources/img/dollar.gif)");
+    select.style.color = "transparent";
+    restartPrice(), fetchCurrency("usd");
   } else {
     symbols.forEach((e) => (e.innerHTML = "£")),
-      restartPrice(),
-      fetchCurrency("gbp");
+      (select.style.backgroundImage = "url(resources/img/pound.gif)");
+    select.style.color = "transparent";
+    restartPrice(), fetchCurrency("gbp");
   }
 });
 
