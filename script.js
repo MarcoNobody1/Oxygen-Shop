@@ -37,6 +37,12 @@ const modalinput = document.getElementById("modal-email");
 const modalhead = document.getElementById("modal-imgs");
 const modalform = document.getElementById("modal-form");
 
+//Evento 7
+const select = document.getElementById("select");
+const originPrice = [];
+const symbols = document.querySelectorAll(".symbol");
+const prices = document.querySelectorAll(".price");
+
 //Eventos y funciones
 
 // Evento 1: para expandir o contraer el nav y cambiar la img de menu
@@ -305,8 +311,59 @@ modalinput.addEventListener("keyup", (e) => {
 
 //Evento 7: para el selector de moneda
 
-const select = document.getElementById("select");
+async function fetchExRates() {
+  const response = await fetch(
+    `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json`
+  );
+  const data = await response.json();
+  return data;
+}
 
 select.addEventListener("change", () => {
   select.blur();
+
+  if (originPrice.length === 0) {
+    prices.forEach((e) => originPrice.push(Number(e.innerHTML)));
+  } else {
+    false;
+  }
+  const fetchCurrency = async (curr) => {
+    try {
+      const currencies = await fetchExRates();
+
+      if (curr === "eur") {
+        prices.forEach(
+          (e) =>
+            (e.innerHTML = Math.round(Number(e.innerHTML) * currencies.usd.eur))
+        );
+      } else if (curr === "gbp") {
+        prices.forEach(
+          (e) =>
+            (e.innerHTML = Math.round(Number(e.innerHTML) * currencies.usd.gbp))
+        );
+      } else {
+        restartPrice();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  if (select.value === "euro") {
+    symbols.forEach((e) => (e.innerHTML = "€")),
+      restartPrice(),
+      fetchCurrency("eur");
+  } else if (select.value === "dolar") {
+    symbols.forEach((e) => (e.innerHTML = "$")),
+      restartPrice(),
+      fetchCurrency("usd");
+  } else {
+    symbols.forEach((e) => (e.innerHTML = "£")),
+      restartPrice(),
+      fetchCurrency("gbp");
+  }
 });
+
+function restartPrice() {
+  prices.forEach((p, i) => (p.innerHTML = originPrice[i]));
+}

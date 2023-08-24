@@ -482,16 +482,20 @@ $ultrabold: 800;
 
 /*styling de los precios de cada oferta*/
 
-.price1 {
+#price1 {
    @include precio;
 }
 
-.price2 {
+#price2 {
    @include precio($color: #07ace6);
 }
 
-.price3 {
+#price3 {
    @include precio($color: #55dfb4);
+}
+
+.symbol{
+   margin-right: -0.625rem;
 }
 
 /*animación de escala de precios con hover*/
@@ -876,7 +880,7 @@ $ultrabold: 800;
    padding: 10px;
    border: 1px solid #ccc;
    border-radius: 5px;
-   font-family: 'Open Sans';
+   font-family: "Open Sans";
    font-size: 1rem;
    width: 200px;
 }
@@ -887,10 +891,9 @@ $ultrabold: 800;
    text-align: center;
 }
 
-#select:focus{
+#select:focus {
    background: url(resources/img/select-selected.gif);
    color: transparent;
-
 }
 
 /*Clase hidden condicional al ancho de pantalla */

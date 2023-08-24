@@ -456,7 +456,7 @@ body {
 }
 
 /*styling de los precios de cada oferta*/
-.price1 {
+#price1 {
   color: #fb3b64;
   font-family: "Open Sans";
   font-size: 2.875rem;
@@ -464,7 +464,7 @@ body {
   text-align: center;
 }
 
-.price2 {
+#price2 {
   color: #07ace6;
   font-family: "Open Sans";
   font-size: 2.875rem;
@@ -472,12 +472,16 @@ body {
   text-align: center;
 }
 
-.price3 {
+#price3 {
   color: #55dfb4;
   font-family: "Open Sans";
   font-size: 2.875rem;
   font-weight: 300;
   text-align: center;
+}
+
+.symbol {
+  margin-right: -0.625rem;
 }
 
 /*animación de escala de precios con hover*/
