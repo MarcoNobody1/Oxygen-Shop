@@ -920,6 +920,8 @@ $ultrabold: 800;
       display: inline-block;
       width: 60%;
       height: 24px;
+      -webkit-user-select: none;
+   user-select: none;
    }
 }
 
@@ -947,6 +949,8 @@ $ultrabold: 800;
    background-size: cover;
    color: #08a6e4;
    cursor: pointer;
+   -webkit-user-select: none;
+   user-select: none;
 }
 
 .checked {
@@ -959,6 +963,8 @@ $ultrabold: 800;
    color: #08a6e4;
    cursor: pointer;
    animation: bounce 0.6s both;
+   -webkit-user-select: none;
+   user-select: none;
 }
 
 /*Clase hidden condicional al ancho de pantalla */

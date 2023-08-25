@@ -897,6 +897,8 @@ body {
   display: inline-block;
   width: 60%;
   height: 24px;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .material-symbols-outlined {
@@ -919,6 +921,8 @@ body {
   background-size: cover;
   color: #08a6e4;
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .checked {
@@ -931,6 +935,8 @@ body {
   color: #08a6e4;
   cursor: pointer;
   animation: bounce 0.6s both;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /*Clase hidden condicional al ancho de pantalla */
