@@ -370,3 +370,87 @@ select.addEventListener("change", () => {
 function restartPrice() {
   prices.forEach((p, i) => (p.innerHTML = originPrice[i]));
 }
+
+//Evento 8: para el carrusel de imágenes (Slider)
+
+class Slider {
+  constructor(sliderId) {
+    this.slider = document.querySelector(`#${sliderId}`);
+    this.imgs = document.querySelectorAll(".imgslider");
+    this.indexNow = 0;
+    this.allImgs = this.imgs.length;
+    this.allDots = null;
+    this.timer;
+  }
+  start() {
+    const div = document.getElementById("dots");
+    this.imgs.forEach((e, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot", `${i}`);
+      div.appendChild(dot);
+    });
+    this.allDots = document.querySelectorAll(".dot");
+    this.show();
+    this.countdown();
+  }
+  next() {
+    this.indexNow = (this.indexNow + 1) % this.allImgs;
+    this.show();
+  }
+  prev() {
+    this.indexNow = (this.indexNow - 1 + this.allImgs) % this.allImgs;
+    this.show();
+  }
+  show() {
+    for (let i = 0; i < this.allImgs; i++) {
+      if (i === this.indexNow) {
+        this.imgs[i].classList.add("show");
+        this.allDots[i].classList.add("checked");
+        this.allDots[i].classList.remove("dot");
+      } else {
+        this.imgs[i].classList.remove("show");
+        this.allDots[i].classList.remove("checked");
+        this.allDots[i].classList.add("dot");
+      }
+    }
+  }
+  countdown() {
+    this.timer = setInterval(() => {
+      this.next();
+    }, 3000);
+  }
+  stopcount() {
+    return clearInterval(this.timer);
+  }
+  imganddot(e) {
+    this.stopcount();
+    this.indexNow = e;
+    this.show();
+    this.countdown();
+  }
+}
+
+const sliderImg = new Slider("slider");
+
+document.addEventListener("click", (e) => {
+  e.target.matches(".forward")
+    ? sliderImg.next()
+    : e.target.matches(".back")
+    ? sliderImg.prev()
+    : false;
+  const dotarray = document.querySelectorAll(".dot");
+  let array = [...dotarray];
+  let i = array.indexOf(e.target);
+
+  if (e.target.matches(".dot")) {
+    if (i >= sliderImg.indexNow) {
+      sliderImg.imganddot(i+1);
+    } else {
+      sliderImg.imganddot(i);
+    }
+  } else {
+    false;
+  }
+});
+
+sliderImg.start();
