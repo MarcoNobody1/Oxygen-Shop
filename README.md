@@ -29,10 +29,24 @@ Los requisitos a seguir para cumplir los objetivos del proyecto son los siguient
 * Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las imágenes individuales, avanza automáticamente):
 <img src="resources/img/carrusel.png" alt="Carrusel de fotos" width="400px" height="auto">
 
-* Después de la sección de precios. El HTML será un **div** con el id *slider*, que contiene varios elementos <img />. El JS Será una clase ‘Slider’, cuyo constructor acepta 1 parámetro, un string con el ID del elemento principal (‘_slider_’). Puedes obtener imágenes de [aqui](https://librestock.com/). 
+Se debe añadir después de la sección de precios. El HTML será un **div** con el id *slider*, que contiene varios elementos <img />. El JS Será una clase ‘Slider’, cuyo constructor acepta 1 parámetro, un string con el ID del elemento principal (‘_slider_’). Puedes obtener imágenes de [aqui](https://librestock.com/). 
 
 
 ## Requisitos Extra
+
+A parte de los requisitos que pedía el proyecto, se han añadido otras funcionalidades al proyecto tales como:
+
+* El **percentage scroller** cambia de color dependiendo de la *sección de la página* donde te encuentras.
+
+* Animación en el *botón* de **Return to the top** al hacer hover por encima.
+
+* *Alerta personalizada* en la parte superior de la pantalla al rellenar correctamente el **formulario de contacto**.
+
+* **Modal de *Subscribe***: La animación de la parte superior del modal cambia dependiendo de si se introduce un *e-mail correcto* o *incorrecto*. Tambien cuenta con una *alerta personalizada* cuando se rellena correctamente.
+
+* **Selector de moneda**: Contiene una animación mientras se espera a seleccionar la *moneda*, así como *animaciones personalizadas* dependiendo del tipo de moneda que se seleccione.
+
+* **Carrusel de fotos *(Slider)***: Se añaden *animaciones de transición* a las **imágenes** y a los **puntos de navegación**.
 
 
 ## Actualizaciones // Nuevas Funciones
