@@ -15,7 +15,7 @@ const cbox = document.getElementById("check");
 const pt3 = document.getElementById("pt3");
 
 //Evento 3:
-const button = document.createElement("button");
+const button = document.getElementById("returnbtn");
 const header = document.getElementById("header");
 
 //Evento 4:
@@ -49,10 +49,10 @@ const prices = document.querySelectorAll(".price");
 
 function desplegarMenu() {
   nav.classList.toggle("hidden");
-  if (menu.getAttribute("src") === "./resources/svg/menu.svg") {
-    menu.setAttribute("src", "./resources/svg/x-menu.svg");
-  } else {
+  if (nav.classList.contains("hidden")) {
     menu.setAttribute("src", "./resources/svg/menu.svg");
+  } else {
+    menu.setAttribute("src", "./resources/svg/x-menu.svg");
   }
 }
 
@@ -82,9 +82,6 @@ window.addEventListener("scroll", function barraProgreso() {
 
 //Evento 3: Creación y evento del botón "Return to the top"
 
-button.classList.add("return");
-button.innerText = "Return to the top!";
-
 button.addEventListener("click", function () {
   setTimeout(() => {
     window.scrollTo({
@@ -93,8 +90,6 @@ button.addEventListener("click", function () {
     });
   }, 200);
 });
-
-pt3.appendChild(button);
 
 //Evento 4: para el botón de 'Open your shop'
 
@@ -112,31 +107,29 @@ openBtn.addEventListener("click", function () {
 formBtn.addEventListener("click", function () {
   const name = nameInput.value;
   const email = emailInput.value;
-  let check1;
-  let check2;
-  let check3;
+  let check1 = 0;
 
   if (name.length < 2 || name.length > 100) {
-    nameInput.style.border = "1px solid red";
+    nameInput.style.border = "2px solid red";
   } else {
     nameInput.style.border = "initial";
-    check1 = true;
+    check1++;
   }
   if (!emailPattern.test(email)) {
-    emailInput.style.border = "1px solid red";
+    emailInput.style.border = "2px solid red";
   } else {
     emailInput.style.border = "initial";
-    check2 = true;
+    check1++;
   }
   if (!checkInput.checked) {
     checkInput.style.outline = "2px solid red";
     checkInput.style.border = "none";
   } else {
     checkInput.style.outline = "initial";
-    check3 = true;
+    check1++;
   }
 
-  if (check1 && check2 && check3) {
+  if (check1 === 3) {
     fetchingData(name, email);
     setTimeout(() => {
       nameInput.value = "";
@@ -163,8 +156,9 @@ formBtn.addEventListener("click", function () {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        return { email: email_data, name: name_data };
       })
-      .then(() => {
+      .then(({email, name}) => {
         const Alert = Swal.mixin({
           toast: true,
           position: "top",
@@ -179,11 +173,18 @@ formBtn.addEventListener("click", function () {
 
         Alert.fire({
           icon: "success",
-          title: "Success! You will soon receive an email from us.",
+          title: `Thanks ${name}!`,
+          text: `You'll soon receive an email at ${email}.`,
         });
       })
       .catch((err) => {
-        console.log(`error ${err}`);
+        Swal.fire({
+          icon: "error",
+          title: "<strong>It looks like something's wrong...</strong>",
+          text: `${err}`,
+          footer:
+            "Either our server is busy, or you have no internet connection. Please try again later.",
+        });
       });
   }
 });
@@ -261,7 +262,7 @@ async function enviarDatos(email) {
     const response = await fetch(urltest, usersub);
     const datasub = await response.json();
     console.log(datasub);
-
+    
     const Toast = Swal.mixin({
       toast: true,
       position: "top",
@@ -279,7 +280,13 @@ async function enviarDatos(email) {
       title: "Your subscription has been successfully registered",
     });
   } catch (err) {
-    console.log(`error ${err}`);
+    Swal.fire({
+      icon: "error",
+      title: "<strong>It looks like something's wrong...</strong>",
+      text: `${err}`,
+      footer:
+        "Either our server is busy, or you have no internet connection. Please try again later.",
+    });
   }
 }
 
@@ -324,8 +331,6 @@ select.addEventListener("change", () => {
 
   if (originPrice.length === 0) {
     prices.forEach((e) => originPrice.push(Number(e.innerHTML)));
-  } else {
-    false;
   }
   const fetchCurrency = async (curr) => {
     try {
@@ -345,7 +350,13 @@ select.addEventListener("change", () => {
         restartPrice();
       }
     } catch (err) {
-      console.log(err);
+      Swal.fire({
+        icon: "error",
+        title: "<strong>It looks like something's wrong...</strong>",
+        text: `${err}`,
+        footer:
+          "Either our server is busy, or you have no internet connection. Please try again later.",
+      });
     }
   };
 
@@ -444,7 +455,7 @@ document.addEventListener("click", (e) => {
 
   if (e.target.matches(".dot")) {
     if (i >= sliderImg.indexNow) {
-      sliderImg.imganddot(i+1);
+      sliderImg.imganddot(i + 1);
     } else {
       sliderImg.imganddot(i);
     }
