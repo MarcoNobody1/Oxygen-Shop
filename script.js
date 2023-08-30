@@ -1,10 +1,7 @@
-// Declaracion de variables
 
-//Evento 1:
 const nav = document.getElementById("nav");
 const menu = document.getElementById("menu");
 
-//Evento 2:
 const bar = document.getElementById("pgr-bar");
 const scrollY = window.scrollY;
 const docHeigth = document.documentElement.scrollHeight;
@@ -14,14 +11,11 @@ const prBlue = document.getElementById("pr__blue");
 const cbox = document.getElementById("check");
 const pt3 = document.getElementById("pt3");
 
-//Evento 3:
 const button = document.getElementById("returnbtn");
 const header = document.getElementById("header");
 
-//Evento 4:
 const openBtn = document.querySelector(".shop-btn");
 
-//Evento 5:
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const formBtn = document.querySelector(".f-btn");
@@ -29,7 +23,6 @@ const checkInput = document.getElementById("check");
 const emailPattern =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-//Evento 6
 const modal = document.getElementById("modal");
 const modalcross = document.getElementById("modalcross");
 const subbtn = document.getElementById("modal-btn");
@@ -37,15 +30,11 @@ const modalinput = document.getElementById("modal-email");
 const modalhead = document.getElementById("modal-imgs");
 const modalform = document.getElementById("modal-form");
 
-//Evento 7
 const select = document.getElementById("select");
 const originPrice = [];
 const symbols = document.querySelectorAll(".symbol");
 const prices = document.querySelectorAll(".price");
 
-//Eventos y funciones
-
-// Evento 1: para expandir o contraer el nav y cambiar la img de menu
 
 function desplegarMenu() {
   nav.classList.toggle("hidden");
@@ -57,8 +46,6 @@ function desplegarMenu() {
 }
 
 menu.addEventListener("click", desplegarMenu);
-
-// Evento 2: para la barra de progreso
 
 window.addEventListener("scroll", function barraProgreso() {
   const pt2pos = pt2.getBoundingClientRect().top;
@@ -80,7 +67,6 @@ window.addEventListener("scroll", function barraProgreso() {
   }
 });
 
-//Evento 3: Creación y evento del botón "Return to the top"
 
 button.addEventListener("click", function () {
   setTimeout(() => {
@@ -91,7 +77,6 @@ button.addEventListener("click", function () {
   }, 200);
 });
 
-//Evento 4: para el botón de 'Open your shop'
 
 openBtn.addEventListener("click", function () {
   setTimeout(() => {
@@ -102,7 +87,6 @@ openBtn.addEventListener("click", function () {
   }, 300);
 });
 
-//Evento 5 (pt1): para la vaidación del formulario
 
 formBtn.addEventListener("click", function () {
   const name = nameInput.value;
@@ -138,7 +122,6 @@ formBtn.addEventListener("click", function () {
     }, 2000);
   }
 
-  //Evento 5 (pt2): para mandar los datos del formulario al servidor de testing
 
   async function fetchingData(name_data, email_data) {
     const url = "https://jsonplaceholder.typicode.com/posts";
@@ -189,9 +172,6 @@ formBtn.addEventListener("click", function () {
   }
 });
 
-//Evento 6: creacion del pop-up /modal
-
-//Abrir el /modal
 
 const openModal = () => {
   modal.style.display = "flex";
@@ -208,8 +188,6 @@ window.addEventListener("scroll", () => {
 if (localStorage.getItem("oculto") === null) {
   setTimeout(openModal, 5000);
 }
-
-//Cerrar el modal
 
 const closeModal = () => {
   modal.classList.add("hidemodal");
@@ -232,8 +210,6 @@ const clickout = (e) => {
 
 document.addEventListener("keydown", keyPressed);
 document.addEventListener("click", clickout);
-
-//Mandar datos de suscripción
 
 function validarEmail(email) {
   if (!emailPattern.test(email)) {
@@ -316,8 +292,6 @@ modalinput.addEventListener("keyup", (e) => {
   }
 });
 
-//Evento 7: para el selector de moneda
-
 async function fetchExRates() {
   const response = await fetch(
     `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json`
@@ -381,8 +355,6 @@ select.addEventListener("change", () => {
 function restartPrice() {
   prices.forEach((p, i) => (p.innerHTML = originPrice[i]));
 }
-
-//Evento 8: para el carrusel de imágenes (Slider)
 
 class Slider {
   constructor(sliderId) {

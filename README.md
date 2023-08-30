@@ -51,3 +51,26 @@ A parte de los requisitos que pedía el proyecto, se han añadido otras funciona
 
 ## Actualizaciones // Nuevas Funciones
 
+* (30/08/2023) Se corrige problema de buffer con los gifs. Ahora los gifs se cargan al cargar el body de la página.
+
+## Correcciones según feedback
+
+#### Evento 1. Función _DeslegarMenú_
+
+* Se cambia la lógica de la función. En vez de funcionar em base a una ruta relativa, funciona en base a la propia estructura del HTML.
+
+#### Evento 2. Creación del botón "_Return to the top_"
+
+* Se elimina la función _appendChild()_. En su lugar, se crea un botón en el código HTML de la página y se determina su comportamiento asignándole un evento desde JS.
+
+#### Evento 5. Validación del formulario.
+
+* Se simplifica la lógica que se encargaba de validar la información pasada en el formulario.
+
+#### Cambios generales.
+
+* Se modifica el sistema de alertas para errores. En vez de reflejar el fallo en la consola (console.log()), se utilizan alertas personalizadas que indican al usuario el tipo de problema que existe con los formularios.
+
+* Se elimina el **_false_** escrito en la lína 336 por no tener ninguna funcionalidad.
+
+* Se unifican todos los cambios en la rama _main_ realizando un __*Pull Request*__ desde la rama *with_js*.
