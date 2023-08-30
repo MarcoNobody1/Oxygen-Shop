@@ -6,15 +6,34 @@
     <title> Oxygen Shop</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/png" href="resources/img/OS.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+    <div id="pgr-bar"></div>
+    <div id="modal" class="slide-in-blurred-right">
+        <div id="modal-imgs">
+            <img id="modalcross" src="resources/svg/cross.svg" alt="cross">
+        </div>
+        <form id="modal-form">
+            <input placeholder="E-mail: oxygen@shop.xyz" type="email" name="modal-email" id="modal-email">
+            <button id="modal-btn" type="button">Subscribe</button>
+        </form>
+    </div>
     <header id="header">
         <a id="header__logo" href="index.html">
             <h1>OXYGENShop</h1>
@@ -119,12 +138,22 @@
     </section>
     <section id="pt3">
         <h2>Pricing</h2>
+        <select aria-label="State" name="currency" id="select">
+            <option id="op1" value="euro">EUR</option>
+            <option id="op2" value="dolar" selected>USD</option>
+            <option id="op3" value="libra">GBP</option>
+        </select>
+        <br>
+        <br>
         <div id="pt3__pricing">
             <div class="pr1">
                 <div id="pr__red">
                     <div class="pr__title">
                         <h3>Basic</h3>
-                        <p class="price1">$0</p>
+                        <span id="price1">
+                            <span class="symbol">$</span>
+                            <span class="price">0</span>
+                        </span>
                     </div>
                     <div class="pr__list">
                         <ul>
@@ -152,7 +181,10 @@
                 <div id="pr__blue">
                     <div class="pr__title">
                         <h3>Professional</h3>
-                        <p class="price2">$25</p>
+                        <span id="price2">
+                            <span class="symbol">$</span>
+                            <span class="price">25</span>
+                        </span>
                         <p class="offer">Limited offer</p>
                     </div>
                     <div class="pr__list">
@@ -181,7 +213,10 @@
                 <div id="pr__green">
                     <div class="pr__title">
                         <h3>Premium</h3>
-                        <p class="price3">$60</p>
+                        <span id="price3">
+                            <span class="symbol">$</span>
+                            <span class="price">60</span>
+                        </span>
                         <p class="offer">Limited offer</p>
                     </div>
                     <div class="pr__list">
@@ -207,27 +242,44 @@
                 <button type="submit" class="pr-btn">Begin</button>
             </div>
         </div>
+        <div id="slider" class="slider">
+            <img src="resources/slider/1.jpg" alt="img1" id="img0" class="imgslider">
+            <img src="resources/slider/2.jpg" alt="img2" id="img1" class="imgslider">
+            <img src="resources/slider/3.jpg" alt="img3" id="img2" class="imgslider">
+            <img src="resources/slider/4.jpg" alt="img4" id="img3" class="imgslider">
+            <img src="resources/slider/5.jpg" alt="img5" id="img4" class="imgslider">
+            <span id="arrowback" class="material-symbols-outlined control back">
+                arrow_back_ios
+                </span>
+            <div id="dots" class="dots">
+            </div>
+            <span id="arrowforward" class="material-symbols-outlined control forward">
+                arrow_forward_ios
+                </span>
+        </div>
         <div id="pt3__contact">
-            <form id="form__flex">
-                <div id="contact__form">
-                    <p id="formu">Any questions?</p>
-                    <p class="title2">Leave your email address or call us!</p>
-                    <div id="contact__qts">
-                        <div>
-                            <img src="./resources/svg/mail.svg" alt="icono de carta">
-                            <p class="inf">info@bestshop.xyz</p>
-                        </div>
-                        <div>
-                            <img src="./resources/svg/phone.svg" alt="icono de telefono">
-                            <p class="inf">123 456 789</p>
-                        </div>
+
+            <div id="contact__form">
+                <p id="formu">Any questions?</p>
+                <p class="title2">Leave your email address or call us!</p>
+                <div id="contact__qts">
+                    <div>
+                        <img src="./resources/svg/mail.svg" alt="icono de carta">
+                        <p class="inf">info@bestshop.xyz</p>
+                    </div>
+                    <div>
+                        <img src="./resources/svg/phone.svg" alt="icono de telefono">
+                        <p class="inf">123 456 789</p>
                     </div>
                 </div>
+            </div>
+            <form id="form__flex">
                 <div id="contact__inputs">
                     <label for="name" class="input__title">NAME</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" placeholder="Enter a name between 2 - 100 letters"
+                        required>
                     <label for="email" class="input__title">EMAIL</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter a valid e-mail" required>
                     <input aria-label="chekbox" type="checkbox" name="check" id="check" class="check" required>
                     <label for="check" class="checkbox__text">I hereby give consent for my personal data included in my
                         application to be processed for the purposes of the recruitment process under the European
@@ -238,8 +290,9 @@
                         and repealing Directive 95/46/EC (Data Protection Directive)</label>
                 </div>
             </form>
-            <button type="submit" form="form__flex" class="f-btn">Send</button>
+            <button class="f-btn">Send</button>
         </div>
+        <button id="returnbtn" class="return">Return to the top!</button>
     </section>
     <footer id="footer">
         <section id="footer__text">

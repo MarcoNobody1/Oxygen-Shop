@@ -1,84 +1,53 @@
-# Proyecto OXYGENShop (1)
+# Proyecto OXYGENShop (2)
 
-Proyecto OXYGENShop es un proyecto de programación enfocado a la sintáxis semántica en HTML, la utilización del preprocesador SASS para generar el código CSS y el uso de la metodología BEM a la hora de nombrar las clases.
+Proyecto OXYGENShop (2) es un proyecto de programación enfocado a la programación funcional en JavaScript, así como el desarrollo de diferentes funcionalidades utilizando el mismo lenguaje
 
 ## Objetivo del Proyecto
 
-El objetivo del proyecto es demostrar los conocimientos sobre los lenguajes de programación y metodologías mencionadas anteriormente, a la vez que se siguen unos requisitos para duplicar el diseño de una página web responsive. Esta debe funcionar acorde a  la anchura de todos los dispositivos utilizando media queries para obtener un resultado limpio y ordenado.
-Ej:
-
-```bash
-@media only screen and (min-width: 1000px) {}
-```
+El objetivo del proyecto es demostrar los conocimientos sobre el lenguaje de programación a la vez que se siguen unos requisitos para duplicar el diseño de una página web responsive.
 
 ## Requisitos del Proyecto
 
 Los requisitos a seguir para cumplir los objetivos del proyecto son los siguientes:
 
-* Hacer primero la versión movil y, después, la versión para ordenadores utilizando media queries.
-* Utilizar los siguientes estilos:
-```bash
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    min-width: 320px;
-}
-```
-* Poner esta etiqueta dentro del "<< head >>":
-```bash
-<meta name="viewport" content="width=device-width, initial-scale=1">
-```
-* Duplicar este [diseño](https://www.figma.com/file/n7pSj9KadTb6Pb6pmf10oT/OXYGEN-Shop?node-id=0%3A1).
-* Programar un efecto "mouse over" en el apartado de precios para que, cuando el usuario ubique el ratón encima de alguno de los precios, este aumente de tamaño.
-* No utilizar flex ni grid en la versión móvil, y luego utilizarlo en la versión desktop.
-* Utilizar "medidas responsive" (intentar no utilizar px, ni position absolute y, en su lugar, utilizar "%" o "rem").
+* Una vez más, debemos duplicar este [diseño](https://www.figma.com/file/n7pSj9KadTb6Pb6pmf10oT/OXYGEN-Shop?node-id=0%3A1) y modificarlo acorde a lo que necesitemos para realizar las demás funcionalidades.
+
+* El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa de menú.
+
+* Un elemento ‘percentage scroller’ [así](https://webdevtrick.com/wp-content/uploads/animated-scroll-percentage-show.mp4) (solo la barra, no el círculo).
+
+* Crear un botón ‘Return to the top’ al fondo que espera 200 milisegundos y vuelve al principio de la página con una animación suave.
+
+* Implementar validación en el formulario. El nombre tiene que tener entre 2 y 100 letras, la dirección de correo electrónico tiene que ser válida (https://www.emailregex.com/) y tienen que hacer el checkbox. Si un campo no es válido, cambiar el color de su border a rojo.
+
+* Recoger los datos del formulario y mandarselos a un servidor JSON de testing como [este](https://jsonplaceholder.typicode.com/guide/) con fetch().
+
+* Crear un popup (/modal) de ‘Subscribe to our newsletter’ que aparece después de 5 segundos, o cuando el usuario baja 25% de la página. Validar la dirección y mandársela al mismo servidor. Habrá 3 maneras de quitarlo, con un botón X, haciendo clic fuera del modal o con la tecla ESC. No aparecerá otra vez, después de ser cerrado (con localStorage/sessionStorage).
+
+* Añadir un selector de moneda (EUR, USD, GBP), obtener los tipos de cambio de [esta API]( https://github.com/fawazahmed0/currency-api#readme). - [LINK AL JSON](https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json) - permitiendo al usuario cambiar la moneda y ver los precios actualizados.
+
+* Crear un ‘Slider’ con esta funcionalidad (botones prev/next, puntos para las imágenes individuales, avanza automáticamente):
+<img src="resources/img/carrusel.png" alt="Carrusel de fotos" width="400px" height="auto">
+
+Se debe añadir después de la sección de precios. El HTML será un **div** con el id *slider*, que contiene varios elementos <img />. El JS Será una clase ‘Slider’, cuyo constructor acepta 1 parámetro, un string con el ID del elemento principal (‘_slider_’). Puedes obtener imágenes de [aqui](https://librestock.com/). 
+
 
 ## Requisitos Extra
 
 A parte de los requisitos que pedía el proyecto, se han añadido otras funcionalidades al proyecto tales como:
 
-+ Al hacer *click* tanto en el **logo del header** como en el **logo del footer**, la página te redireccionará al *index.html*.
-+ Al hacer *hover* por encima de los elementos del **nav**, estos cambian su color. En la versión web, a parte de cambiar de color, también se destacará *una barra azul* en la parte de abajo de cada elemento.
-+ Todos los **botones** cuentan con una transición al hacer *hover* por encima de ellos (se agrandan y se iluminan).
-+ Al hacer *hover* por encima de la **información de contacto**, esta cambia de color (el email y el teléfono).
-+ Al hacer *hover* por encima de los **iconos del footer**, estos cambian su imagen (Twitter y Facebook).
-+ Por último, se ha añadido la propiedad *transition* a toda la página de la siguiente manera:
-```bash
-*{
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-   transition: all 200ms ease-out;
-}
-```
-El objetivo de esto es que, al probar el diseño responsive, toda la página haga una pequeña "animación de adaptación" al pasar por los puntos de media query.
+* El **percentage scroller** cambia de color dependiendo de la *sección de la página* donde te encuentras.
 
-Es por el simple << disfrute del developer >>.
+* Animación en el *botón* de **Return to the top** al hacer hover por encima.
+
+* *Alerta personalizada* en la parte superior de la pantalla al rellenar correctamente el **formulario de contacto**.
+
+* **Modal de *Subscribe***: La animación de la parte superior del modal cambia dependiendo de si se introduce un *e-mail correcto* o *incorrecto*. Tambien cuenta con una *alerta personalizada* cuando se rellena correctamente.
+
+* **Selector de moneda**: Contiene una animación mientras se espera a seleccionar la *moneda*, así como *animaciones personalizadas* dependiendo del tipo de moneda que se seleccione.
+
+* **Carrusel de fotos *(Slider)***: Se añaden *animaciones de transición* a las **imágenes** y a los **puntos de navegación**.
+
 
 ## Actualizaciones // Nuevas Funciones
 
-* (08/08/2023 14:09) Se añade nueva función a la barra del menú en Desktop y App. Ahora te acompaña en todo tu recorrido por la web.
-* (10/07/2023 13:56) Correjida sintaxis de HTML del footer.
-
-## Correcciones según feedback
-
-#### Apartado Visual
-
-* Se corrigen anchos de elementos HTML para conseguir un mayor parecido al diseño original de Figma.
-* Se añaden márgenes al apartado de pricing para corregir diseño en ciertos dispositivos (tablet, pequeño laptop, etc..).
-
-#### HTML
-
-* Se comprueban, se corrigen y se cierran todas las etiquetas que quedaban sin cerrar.
-* Se corrigen errores de sintaxis en el código **HTML**.
-* Se modifica sintaxis del header: se añade etiqueta de cabecera al título.
-* Se modifica sintaxis de la foto de fondo: se quitan las etiquetas de _figure_.
-* Se modifica sintaxis del form: ahora los elementos de contacto son _div_ en vez de elementos _li_.
-
-#### JavaScript
-
-* Se deshecha la función ***cambiarImagen()***. La imagen ha sido sustituida por un div que cambia mediante _@media queries_.
-* Se modifica sintaxis de evento del menú desplegable: se deshecha el _onclick_ del archivo **HTML** y en su lugar se utiliza una función ***.addEventListener()*** en **JavaScript** aplicada a la _img_ del menú.
