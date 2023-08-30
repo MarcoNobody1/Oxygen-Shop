@@ -12,6 +12,14 @@ body {
    min-width: 320px;
 }
 
+body::after {
+   display: none;
+   content: url(resources/img/boton-app.gif) url(resources/img/dollar.gif) url(resources/img/euro.gif)
+      url(resources/img/modal-btn-hover.gif) url(resources/img/modal-head-app.gif)
+      url(resources/img/modal-head-right.gif) url(resources/img/modal-head-wrong.gif) url(resources/img/modal-head.gif)
+      url(resources/img/pound.gif) url(resources/img/select-selected.gif);
+}
+
 /*variables font-weight*/
 
 $light: 300;
@@ -921,7 +929,7 @@ $ultrabold: 800;
       width: 60%;
       height: 24px;
       -webkit-user-select: none;
-   user-select: none;
+      user-select: none;
    }
 }
 
