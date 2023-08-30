@@ -74,3 +74,5 @@ A parte de los requisitos que pedía el proyecto, se han añadido otras funciona
 * Se elimina el **_false_** escrito en la lína 336 por no tener ninguna funcionalidad.
 
 * Se unifican todos los cambios en la rama _main_ realizando un __*Pull Request*__ desde la rama *with_js*.
+
+* Se eliminan todos los comentarios del archivo _.js_.
