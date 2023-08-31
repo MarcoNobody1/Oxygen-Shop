@@ -51,7 +51,7 @@ A parte de los requisitos que pedía el proyecto, se han añadido otras funciona
 
 ## Actualizaciones // Nuevas Funciones
 
-* (30/08/2023) Se corrige problema de buffer con los gifs. Ahora los gifs se cargan al cargar el body de la página.
+* (30/08/2023) Se corrige problema de buffer con los gifs. Ahora los gifs se inicializan junto al body de la página mediante CSS.
 
 ## Correcciones según feedback
 
