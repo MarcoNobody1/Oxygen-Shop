@@ -55,7 +55,7 @@ A parte de los requisitos que pedía el proyecto, se han añadido otras funciona
 
 ## Correcciones según feedback
 
-#### Evento 1. Función _DeslegarMenú_
+#### Evento 1. Función _DesplegarMenú_
 
 * Se cambia la lógica de la función. En vez de funcionar em base a una ruta relativa, funciona en base a la propia estructura del HTML.
 
