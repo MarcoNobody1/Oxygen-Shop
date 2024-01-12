@@ -1,6 +1,6 @@
 # Proyecto OXYGENShop (2)
 
-Proyecto OXYGENShop (2) es un proyecto de programación enfocado a la programación funcional en JavaScript, así como el desarrollo de diferentes funcionalidades utilizando el mismo lenguaje
+Proyecto OXYGENShop (2) es un proyecto de programación enfocado a la programación funcional en JavaScript, así como el desarrollo de diferentes funcionalidades utilizando el mismo lenguaje.
 
 ## Objetivo del Proyecto
 
@@ -10,13 +10,13 @@ El objetivo del proyecto es demostrar los conocimientos sobre el lenguaje de pro
 
 Los requisitos a seguir para cumplir los objetivos del proyecto son los siguientes:
 
-* Una vez más, debemos duplicar este [diseño](https://www.figma.com/file/n7pSj9KadTb6Pb6pmf10oT/OXYGEN-Shop?node-id=0%3A1) y modificarlo acorde a lo que necesitemos para realizar las demás funcionalidades.
+* Una vez más, debemos duplicar el diseño de figma y modificarlo acorde a lo que necesitemos para realizar las demás funcionalidades.
 
 * El menú de la vista mobile que aparece solo cuando haces clic en el botón hamburguesa de menú.
 
 * Un elemento ‘percentage scroller’ [así](https://webdevtrick.com/wp-content/uploads/animated-scroll-percentage-show.mp4) (solo la barra, no el círculo).
 
-* Crear un botón ‘Return to the top’ al fondo que espera 200 milisegundos y vuelve al principio de la página con una animación suave.
+* Crear un botón ‘Return to the top’ al fondo que espera 200 ms y vuelve al principio de la página con una animación suave.
 
 * Implementar validación en el formulario. El nombre tiene que tener entre 2 y 100 letras, la dirección de correo electrónico tiene que ser válida (https://www.emailregex.com/) y tienen que hacer el checkbox. Si un campo no es válido, cambiar el color de su border a rojo.
 
