@@ -1,6 +1,6 @@
 # Proyecto OXYGEN Shop (2)
 
-Proyecto OXYGENShop (2) es un proyecto de programación enfocado a la programación funcional en JavaScript, así como el desarrollo de diferentes funcionalidades utilizando el mismo lenguaje.
+Proyecto OXYGEN Shop (2) es un proyecto de programación enfocado a la programación funcional en JavaScript, así como el desarrollo de diferentes funcionalidades utilizando el mismo lenguaje.
 
 ## Objetivo del Proyecto
 
